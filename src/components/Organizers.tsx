@@ -55,7 +55,7 @@ const Organizers = () => {
           </div>
 
           {/* Main Organizers */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {mainOrganizers.map((organizer, index) => (
               <Card
                 key={index}
@@ -117,7 +117,7 @@ const Organizers = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {localOrganizers.map((organizer, index) => (
               <Card
                 key={index}

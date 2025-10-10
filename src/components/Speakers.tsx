@@ -68,7 +68,7 @@ const Speakers = () => {
           </div>
 
           {/* Plenary Speakers */}
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {plenarySpeakers.map((speaker, index) => (
               <Card
                 key={index}
@@ -114,7 +114,7 @@ const Speakers = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
           </div>
 
-          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {lecturers.map((lecturer, index) => (
               <Card
                 key={index}
