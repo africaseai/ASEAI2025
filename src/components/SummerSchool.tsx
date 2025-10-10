@@ -45,14 +45,24 @@ const SummerSchool = () => {
           </div>
 
           {/* Introduction */}
-          <div className="prose prose-lg max-w-none">
+          <div className="prose prose-lg max-w-none space-y-6">
             <p className="text-lg text-foreground/80 leading-relaxed">
-              It is our pleasure to call for the initiation of the 2025 IEEE CIS
+              As part of supporting this cause, it is our pleasure to call for the initiation of the 2025 IEEE CIS
               Summer School on Computational Intelligence for Software Engineering.
               The main goal of the summer school is to provide senior undergraduate
               students, M.Sc. or PhD students and other potential audience with
               hands-on knowledge and expert views on the future development at the
               intersection between AI and software engineering.
+            </p>
+            <p className="text-lg text-foreground/80 leading-relaxed">
+              Topics include how to design AI-enabled software systems, their
+              evolution and debugging. The Talks will be given by Plenary Speakers
+              that are active researchers in North American and international
+              institutes. Lecturers will be given by local researchers from both
+              Academia and Industry, to bring both perspectives for the students.
+              The first edition of the summer school will be located in Tunisia,
+              co-sponsored by the LARODEC Laboratory and the Institute of Data
+              Engineering, Analytics, and Science at the University of Michigan-Flint.
             </p>
           </div>
 
