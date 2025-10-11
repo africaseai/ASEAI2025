@@ -34,6 +34,30 @@ const Organizers = () => {
     },
   ];
 
+  const additionalRoles = [
+    {
+      role: "Local Organizer",
+      people: [
+        { name: "Dalel Kanzari", affiliation: "ISSAT, Tunisia" }
+      ]
+    },
+    {
+      role: "Web Chair",
+      people: [
+        { name: "Jasem Khelifi", affiliation: "ÉTS Montreal, Canada" }
+      ]
+    },
+    {
+      role: "Publicity Chairs",
+      people: [
+        { name: "Zaki Brahmi", affiliation: "ETS Montreal, Canada" },
+        { name: "Issam Oukhay", affiliation: "ETS Montreal, Canada" },
+        { name: "Mayssa Ben Kahla", affiliation: "Université de Sousse, Tunisia" },
+        { name: "Sami Achour", affiliation: "Université de Sousse, Tunisia" }
+      ]
+    }
+  ];
+
 
   return (
     <section id="organizers" className="py-20 md:py-32 bg-muted/30">
@@ -99,6 +123,29 @@ const Organizers = () => {
                   </div>
                 </CardContent>
               </Card>
+            ))}
+          </div>
+
+          {/* Additional Roles */}
+          <div className="space-y-8">
+            {additionalRoles.map((section, idx) => (
+              <div key={idx}>
+                <h3 className="text-2xl font-bold mb-4 text-center">{section.role}</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {section.people.map((person, personIdx) => (
+                    <Card
+                      key={personIdx}
+                      className="border-0 shadow-lg"
+                      style={{ boxShadow: "var(--card-shadow)" }}
+                    >
+                      <CardContent className="p-4 text-center">
+                        <h4 className="font-semibold text-base">{person.name}</h4>
+                        <p className="text-sm text-muted-foreground mt-2">{person.affiliation}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
