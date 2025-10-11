@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo-aseai.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -48,9 +49,9 @@ const Navigation = () => {
               e.preventDefault();
               scrollToSection("#home");
             }}
-            className="text-xl md:text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
+            className="flex items-center"
           >
-            CI4SE 2025
+            <img src={logo} alt="ASEAI 2025" className="h-12 md:h-14" />
           </a>
 
           {/* Desktop Navigation */}
