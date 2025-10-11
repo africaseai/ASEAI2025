@@ -3,6 +3,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import ahmedHassan from "@/assets/ahmed-hassan.jpg";
 import lionelBriand from "@/assets/lionel-briand.png";
+import katsuroInoue from "@/assets/katsuro-inoue.jpg";
+import houariSahraoui from "@/assets/houari-sahraoui.jpg";
+import yannGaelGueheneuc from "@/assets/yann-gael-gueheneuc.jpg";
+import simonPeytonJones from "@/assets/simon-peyton-jones.png";
 
 const Speakers = () => {
   const plenarySpeakers = [
@@ -21,19 +25,19 @@ const Speakers = () => {
     {
       name: "Pr. Katsuro Inoue",
       title: "Nanzan University, Japan",
-      image: "https://via.placeholder.com/400x400?text=Katsuro+Inoue",
+      image: katsuroInoue,
       website: "https://www.nanzan-u.ac.jp/English/",
     },
     {
       name: "Pr. Houari Sahraoui",
       title: "Université de Montréal, Canada",
-      image: "https://via.placeholder.com/400x400?text=Houari+Sahraoui",
+      image: houariSahraoui,
       website: "https://diro.umontreal.ca/repertoire-departement/professeurs/professeur/in/in14695/sg/Houari%20Sahraoui/",
     },
     {
       name: "Pr. Yann-Gaël Guéhéneuc",
       title: "Concordia University, Canada",
-      image: "https://via.placeholder.com/400x400?text=Yann+Gael+Gueheneuc",
+      image: yannGaelGueheneuc,
       website: "https://www.concordia.ca/faculty/yann-gael-gueheneuc.html",
     },
     {
@@ -45,7 +49,7 @@ const Speakers = () => {
     {
       name: "Dr. Simon Peyton Jones",
       title: "Microsoft Research Cambridge, UK",
-      image: "https://via.placeholder.com/400x400?text=Simon+Peyton+Jones",
+      image: simonPeytonJones,
       website: "https://www.microsoft.com/en-us/research/people/simonpj/",
     },
     {
