@@ -1,34 +1,38 @@
 import { Mail, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import aliOuni from "@/assets/ali-ouni.png";
+import wiemMkaouer from "@/assets/wiem-mkaouer.jpg";
+import mahaKhemdja from "@/assets/maha-khemdja.png";
+import montassarBenMessaoud from "@/assets/montassar-ben-messaoud.jpg";
 
 const Organizers = () => {
   const mainOrganizers = [
     {
       name: "Pr. Ali Ouni",
       title: "ÉTS Montreal, University of Quebec, Canada",
-      image: "https://via.placeholder.com/400x400?text=Ali+Ouni",
+      image: aliOuni,
       email: "ali.ouni@etsmtl.ca",
       website: "https://ouniali.github.io/",
     },
     {
       name: "Dr. Med Wiem Mkaouer",
       title: "University of Michigan-Flint, USA",
-      image: "https://via.placeholder.com/400x400?text=Wiem+Mkaouer",
+      image: wiemMkaouer,
       email: "mmkaouer@umich.edu",
       website: "https://directory.umflint.edu/computer-science-engineering-and-physics/mmkaouer",
     },
     {
       name: "Dr. Maha Khemdja",
       title: "ISSAF Sousse, Tunisia",
-      image: "https://via.placeholder.com/400x400?text=Maha+Khemdja",
+      image: mahaKhemdja,
       email: "maha.khemdja@issatso.u-sousse.tn",
       website: "https://www.issatso.rnu.tn/",
     },
     {
       name: "Dr. Montassar Ben Messaoud",
       title: "TBS, Tunisia",
-      image: "https://via.placeholder.com/400x400?text=Montassar+Ben+Messaoud",
+      image: montassarBenMessaoud,
       email: "montassar.benmessaoud@tbs.u-tunis.tn",
       website: "https://tunis-business-school.tn/member/montassar-ben-messaoud/",
     },
@@ -131,11 +135,11 @@ const Organizers = () => {
             {additionalRoles.map((section, idx) => (
               <div key={idx}>
                 <h3 className="text-2xl font-bold mb-4 text-center">{section.role}</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className={`flex flex-wrap gap-4 ${section.people.length === 1 ? 'justify-center' : 'justify-center md:justify-start'}`}>
                   {section.people.map((person, personIdx) => (
                     <Card
                       key={personIdx}
-                      className="border-0 shadow-lg"
+                      className="border-0 shadow-lg w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(25%-0.75rem)]"
                       style={{ boxShadow: "var(--card-shadow)" }}
                     >
                       <CardContent className="p-4 text-center">
