@@ -7,6 +7,10 @@ import katsuroInoue from "@/assets/katsuro-inoue.jpg";
 import houariSahraoui from "@/assets/houari-sahraoui.jpg";
 import yannGaelGueheneuc from "@/assets/yann-gael-gueheneuc.jpg";
 import simonPeytonJones from "@/assets/simon-peyton-jones.png";
+import walidMaalej from "@/assets/walid-maalej.png";
+import michelChaudron from "@/assets/michel-chaudron.png";
+import hafedhMili from "@/assets/hafedh-mili.jpg";
+import bruceMaxim from "@/assets/bruce-maxim.jpg";
 
 const Speakers = () => {
   const plenarySpeakers = [
@@ -43,7 +47,7 @@ const Speakers = () => {
     {
       name: "Pr. Walid Maalej",
       title: "University of Hamburg, Germany",
-      image: "https://via.placeholder.com/400x400?text=Walid+Maalej",
+      image: walidMaalej,
       website: "https://www.inf.uni-hamburg.de/en/inst/ab/se/people/maalej.html",
     },
     {
@@ -55,13 +59,13 @@ const Speakers = () => {
     {
       name: "Pr. Michel Chaudron",
       title: "Eindhoven University of Technology, Netherlands",
-      image: "https://via.placeholder.com/400x400?text=Michel+Chaudron",
+      image: michelChaudron,
       website: "https://research.tue.nl/en/persons/michel-chaudron",
     },
     {
       name: "Pr. Hafedh Mili",
       title: "Université du Québec à Montréal, Canada",
-      image: "https://via.placeholder.com/400x400?text=Hafedh+Mili",
+      image: hafedhMili,
       website: "https://professeurs.uqam.ca/professeur/mili.hafedh/",
     },
     {
@@ -73,7 +77,7 @@ const Speakers = () => {
     {
       name: "Pr. Bruce R. Maxim",
       title: "University of Michigan-Dearborn, USA",
-      image: "https://via.placeholder.com/400x400?text=Bruce+Maxim",
+      image: bruceMaxim,
       website: "https://umdearborn.edu/users/bmaxim",
     },
     {
