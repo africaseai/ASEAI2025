@@ -1,7 +1,6 @@
 import { MapPin, Train, Car, Users } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import sousseCity from "@/assets/sousse-city.jpg";
 
 const Venue = () => {
   return (
@@ -15,16 +14,8 @@ const Venue = () => {
           </div>
 
           {/* Venue Info */}
-          <Card className="border-0 shadow-lg overflow-hidden" style={{ boxShadow: "var(--card-shadow)" }}>
-            <div className="relative h-64 md:h-80">
-              <img
-                src={sousseCity}
-                alt="Sousse, Tunisia cityscape showing historic architecture and Mediterranean coastline"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
-            </div>
-            <CardHeader className="-mt-16 relative z-10">
+          <Card className="border-0 shadow-lg" style={{ boxShadow: "var(--card-shadow)" }}>
+            <CardHeader>
               <CardTitle className="text-2xl">Novation City</CardTitle>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="h-5 w-5" />
@@ -49,7 +40,7 @@ const Venue = () => {
               <div className="flex flex-wrap gap-4">
                 <Button asChild>
                   <a
-                    href="https://maps.app.goo.gl/b1nvvHCXS1D7DYPy9"
+                    href="https://maps.google.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
