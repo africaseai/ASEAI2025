@@ -7,6 +7,7 @@ import Program from "@/components/Program";
 import Registration from "@/components/Registration";
 import Venue from "@/components/Venue";
 import Organizers from "@/components/Organizers";
+import Sponsors from "@/components/Sponsors";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -21,7 +22,7 @@ const Index = () => {
       <Registration />
       <Venue />
       <Organizers />
-
+      <Sponsors />
       <Footer />
     </div>
   );
