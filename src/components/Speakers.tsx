@@ -11,6 +11,12 @@ import walidMaalej from "@/assets/walid-maalej.png";
 import michelChaudron from "@/assets/michel-chaudron.png";
 import hafedhMili from "@/assets/hafedh-mili.jpg";
 import bruceMaxim from "@/assets/bruce-maxim.jpg";
+import raulaKula from "@/assets/raula-kula.png";
+import tegawendeBissyande from "@/assets/tegawende-bissyande.png";
+import fatemehFard from "@/assets/fatemeh-fard.jpg";
+import manelAbdellatif from "@/assets/manel-abdellatif.png";
+import moatazChouchen from "@/assets/moataz-chouchen.jpg";
+import mohamedSaied from "@/assets/mohamed-saied.png";
 
 const Speakers = () => {
   const plenarySpeakers = [
@@ -71,7 +77,7 @@ const Speakers = () => {
     {
       name: "Pr. Raula Gaikovina Kula",
       title: "Osaka University, Japan",
-      image: "https://via.placeholder.com/400x400?text=Raula+Kula",
+      image: raulaKula,
       website: "https://raux.github.io/",
     },
     {
@@ -83,31 +89,31 @@ const Speakers = () => {
     {
       name: "Pr. Tegawendé F. Bissyandé",
       title: "SnT, University of Luxembourg",
-      image: "https://via.placeholder.com/400x400?text=Tegawende+Bissyande",
+      image: tegawendeBissyande,
       website: "https://bissyande.github.io/",
     },
     {
       name: "Dr. Fatemeh Fard",
       title: "University of British Columbia, Canada",
-      image: "https://via.placeholder.com/400x400?text=Fatemeh+Fard",
+      image: fatemehFard,
       website: "https://fard.people.ubc.ca/",
     },
     {
       name: "Dr. Manel Abelllatif",
       title: "ÉTS Montreal, Canada",
-      image: "https://via.placeholder.com/400x400?text=Manel+Abelllatif",
+      image: manelAbdellatif,
       website: "https://www.etsmtl.ca/",
     },
     {
       name: "Dr. Moataz Chouchen",
       title: "Concordia University, Canada",
-      image: "https://via.placeholder.com/400x400?text=Moataz+Chouchen",
+      image: moatazChouchen,
       website: "https://www.concordia.ca/faculty/moataz-chouchen.html",
     },
     {
       name: "Dr. Mohamed Aymen Saied",
       title: "Université Laval, Canada",
-      image: "https://via.placeholder.com/400x400?text=Mohamed+Saied",
+      image: mohamedSaied,
       website: "https://www.ulaval.ca/",
     },
   ];
