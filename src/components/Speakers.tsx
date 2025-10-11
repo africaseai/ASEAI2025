@@ -1,19 +1,21 @@
 import { ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import ahmedHassan from "@/assets/ahmed-hassan.jpg";
+import lionelBriand from "@/assets/lionel-briand.png";
 
 const Speakers = () => {
   const plenarySpeakers = [
     {
       name: "Pr. Ahmed E. Hassan",
       title: "Queen's University, Canada",
-      image: "https://via.placeholder.com/400x400?text=Ahmed+Hassan",
+      image: ahmedHassan,
       website: "https://research.cs.queensu.ca/home/ahmed/",
     },
     {
       name: "Pr. Lionel Briand",
       title: "University of Ottawa, Canada, Lero, Ireland",
-      image: "https://via.placeholder.com/400x400?text=Lionel+Briand",
+      image: lionelBriand,
       website: "https://www.lero.ie/people/lionel-briand",
     },
     {
