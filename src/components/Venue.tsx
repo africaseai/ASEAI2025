@@ -49,7 +49,7 @@ const Venue = () => {
               <div className="flex flex-wrap gap-4">
                 <Button asChild>
                   <a
-                    href="https://maps.google.com/"
+                    href="https://maps.app.goo.gl/b1nvvHCXS1D7DYPy9"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
