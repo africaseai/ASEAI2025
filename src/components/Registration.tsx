@@ -1,5 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
+import registrationQR from "@/assets/registration-qr.png";
 
 const Registration = () => {
   const nonResidentFees = [
@@ -20,7 +23,56 @@ const Registration = () => {
           <div className="text-center space-y-4">
             <h2 className="text-3xl md:text-5xl font-bold">Registration</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
+            <p className="text-lg text-muted-foreground mt-4">
+              Secure your spot at Africa's premier AI & Software Engineering event
+            </p>
           </div>
+
+          {/* Registration CTA */}
+          <Card className="border-2 border-primary/20 shadow-lg" style={{ boxShadow: "var(--card-shadow)" }}>
+            <CardContent className="p-8">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="flex-1 text-center md:text-left space-y-4">
+                  <h3 className="text-2xl font-bold">Ready to Register?</h3>
+                  <p className="text-muted-foreground">
+                    Fill out our registration form to join this transformative event. 
+                    Early registration is recommended as spots are limited.
+                  </p>
+                  <Button 
+                    size="lg" 
+                    className="gap-2"
+                    asChild
+                  >
+                    <a 
+                      href="https://forms.gle/BeYvwwqjuQm5diPPu5" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      Register Now
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  </Button>
+                </div>
+                <div className="flex-shrink-0">
+                  <a 
+                    href="https://forms.gle/BeYvwwqjuQm5diPPu5" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                      <img 
+                        src={registrationQR} 
+                        alt="Registration Form QR Code" 
+                        className="w-32 h-32 md:w-40 md:h-40"
+                      />
+                      <p className="text-xs text-center mt-2 text-muted-foreground">Scan to register</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
           {/* Registration Fees */}
           <Card className="border-0 shadow-lg" style={{ boxShadow: "var(--card-shadow)" }}>
