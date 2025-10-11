@@ -1,10 +1,13 @@
+import { useEffect } from "react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import smaLogo from "@/assets/sma.png";
 import africaTechLogo from "@/assets/africa-tech.png";
 import issatLogo from "@/assets/issat.png";
@@ -43,6 +46,11 @@ const Sponsors = () => {
             align: "start",
             loop: true,
           }}
+          plugins={[
+            Autoplay({
+              delay: 3000,
+            }),
+          ]}
           className="w-full max-w-5xl mx-auto"
         >
           <CarouselContent>

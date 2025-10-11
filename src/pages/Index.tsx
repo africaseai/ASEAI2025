@@ -19,10 +19,10 @@ const Index = () => {
       <SummerSchool />
       <Speakers />
       <Program />
+      <Sponsors />
       <Registration />
       <Venue />
       <Organizers />
-      <Sponsors />
       <Footer />
     </div>
   );
