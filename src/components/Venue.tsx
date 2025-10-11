@@ -16,28 +16,24 @@ const Venue = () => {
           {/* Venue Info */}
           <Card className="border-0 shadow-lg" style={{ boxShadow: "var(--card-shadow)" }}>
             <CardHeader>
-              <CardTitle className="text-2xl">Institut des Hautes Études Commerciales</CardTitle>
+              <CardTitle className="text-2xl">Novation City</CardTitle>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="h-5 w-5" />
-                <span>Rue Victor Hugo 2016, Carthage-Présidence, Tunis</span>
+                <span>Sousse, Tunisia</span>
               </div>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="space-y-4">
                 <p className="text-foreground/80 leading-relaxed">
-                  The Institut des Hautes Etudes Commerciales of Carthage (IHEC), is
-                  the first business school in Tunisia, overlooking the hill of
-                  Carthage, where it was established in 1942. IHEC Carthage is one of
-                  the most recognized business schools in Africa due to the value of
-                  its degree and its reputation.
+                  Novation City is an innovative technology and business hub located 
+                  in Sousse, Tunisia. As a hybrid event, participants can join us either 
+                  in person at this state-of-the-art facility or remotely from anywhere 
+                  in the world.
                 </p>
                 <p className="text-foreground/80 leading-relaxed">
-                  IHEC Carthage is situated in a prime location on the Carthage coast,
-                  near the ancient Roman city founded around 814 BC by Elissa.
-                  Overlooking the Mediterranean, the school offers views of the Gulf
-                  of Tunis and Boukornine Mountain to the right, and the picturesque
-                  village of Sidi Bou Saïd famous for its blue-and-white architecture
-                  and cobbled streets to the left.
+                  The venue offers modern facilities and is designed to foster 
+                  collaboration and innovation, making it the perfect setting for 
+                  the African Winter School on Software Engineering & AI.
                 </p>
               </div>
 

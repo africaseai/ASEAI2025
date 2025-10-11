@@ -25,22 +25,22 @@ const Hero = () => {
       <div className="container relative z-10 px-4 text-center text-white">
         <div className="max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom duration-700">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-            Summer School on Computational Intelligence for Software Engineering
+            1st African Winter School on Software Engineering & AI
           </h1>
           <p className="text-2xl md:text-3xl font-semibold text-white/95">
-            CI4SE 2025
+            ASEAI 2025
           </p>
 
           {/* Date and Location */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-lg md:text-xl">
             <div className="flex items-center gap-2">
               <Calendar className="h-6 w-6" />
-              <span>June 11-13, 2025</span>
+              <span>November 24-26, 2025</span>
             </div>
             <div className="hidden md:block w-px h-6 bg-white/30" />
             <div className="flex items-center gap-2">
               <MapPin className="h-6 w-6" />
-              <span>Tunis, Tunisia</span>
+              <span>Novation City, Sousse, Tunisia (Hybrid)</span>
             </div>
           </div>
 

@@ -20,8 +20,8 @@ const About = () => {
     },
     {
       icon: Sparkles,
-      value: "3 Days",
-      label: "Intensive Learning",
+      value: "Hybrid",
+      label: "Event Format",
     },
   ];
 
@@ -58,24 +58,12 @@ const About = () => {
 
           <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
             <p>
-              A dynamic AI landscape is emerging throughout Africa, poised to have a
-              transformative impact. In Africa alone, over 2,400 companies are
-              reportedly involved in AI.
-            </p>
-
-            <p>
-              According to Statista, the generative AI market in Africa is expected
-              to expand from $0.89 billion in 2024 to $8.75 billion by 2028. More
-              than 30 AI communities, from developing regions such as Sudan and Mali
-              to well-established centers like South Africa and Tunisia, are leading
-              this movement.
-            </p>
-
-            <p>
-              Therefore, universities critically need to support this growth by
-              providing AI-focused software engineering skills and specializations,
-              to develop and sustain the next generation of AI-software
-              infrastructure.
+              The Winter School brings world-class scholars from the globe to Africa, 
+              to share knowledge, inspire creativity, and build lasting collaborations. 
+              Through interactive sessions, mentoring, and cutting-edge talks, the mission 
+              of the school is to empower the next generation of students, researchers, and 
+              professionals with hands-on knowledge and deep insights into the future of 
+              Software Engineering in the era of AI.
             </p>
           </div>
         </div>

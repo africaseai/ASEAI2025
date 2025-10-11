@@ -54,7 +54,7 @@ const Registration = () => {
                   offered to selected students
                 </p>
                 <p className="text-sm font-medium">
-                  Deadline for student support application: <span className="text-primary">31/05/2025</span>
+                  Deadline for student support application: <span className="text-primary">Contact organizers</span>
                 </p>
                 <p className="text-xs text-muted-foreground italic">
                   * Applications will be evaluated based on academic merit and motivation
@@ -104,7 +104,10 @@ const Registration = () => {
               <CardContent className="p-6">
                 <p className="text-lg">
                   <span className="text-muted-foreground">Registration deadline:</span>{" "}
-                  <span className="font-bold text-primary text-xl">06/06/2025</span>
+                  <span className="font-bold text-primary text-xl">30 October 2025</span>
+                </p>
+                <p className="text-sm text-muted-foreground mt-2">
+                  Admitted participants will be notified via email by November 3rd, 2025
                 </p>
               </CardContent>
             </Card>
