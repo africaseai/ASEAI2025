@@ -127,7 +127,8 @@ const Speakers = () => {
            speakerName === "Pr. Walid Maalej" ||
            speakerName === "Dr. Simon Peyton Jones" ||
            speakerName === "Pr. Ahmed E. Hassan" ||
-           speakerName === "Dr. Fatemeh Fard";
+           speakerName === "Dr. Fatemeh Fard" ||
+           speakerName === "Pr. Raula Gaikovina Kula";
   };
 
   const getDetailPageLink = (speakerName: string) => {
@@ -154,6 +155,9 @@ const Speakers = () => {
     }
     if (speakerName === "Dr. Fatemeh Fard") {
       return "/speakers/fatemeh-fard";
+    }
+    if (speakerName === "Pr. Raula Gaikovina Kula") {
+      return "/speakers/raula-kula";
     }
     return null;
   };
