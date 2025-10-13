@@ -125,7 +125,8 @@ const Speakers = () => {
            speakerName === "Pr. Michel Chaudron" ||
            speakerName === "Pr. Lionel Briand" ||
            speakerName === "Pr. Walid Maalej" ||
-           speakerName === "Dr. Simon Peyton Jones";
+           speakerName === "Dr. Simon Peyton Jones" ||
+           speakerName === "Pr. Ahmed E. Hassan";
   };
 
   const getDetailPageLink = (speakerName: string) => {
@@ -146,6 +147,9 @@ const Speakers = () => {
     }
     if (speakerName === "Dr. Simon Peyton Jones") {
       return "/speakers/simon-peyton-jones";
+    }
+    if (speakerName === "Pr. Ahmed E. Hassan") {
+      return "/speakers/ahmed-hassan";
     }
     return null;
   };
