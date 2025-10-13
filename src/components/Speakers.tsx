@@ -1,4 +1,5 @@
 import { ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import ahmedHassan from "@/assets/ahmed-hassan.jpg";
@@ -118,6 +119,17 @@ const Speakers = () => {
     },
   ];
 
+  const hasDetailPage = (speakerName: string) => {
+    return speakerName === "Dr. Moataz Chouchen";
+  };
+
+  const getDetailPageLink = (speakerName: string) => {
+    if (speakerName === "Dr. Moataz Chouchen") {
+      return "/speakers/moataz-chouchen";
+    }
+    return null;
+  };
+
 
   return (
     <section id="speakers" className="py-20 md:py-32 bg-muted/30">
@@ -149,22 +161,36 @@ const Speakers = () => {
                   <p className="text-xs text-muted-foreground min-h-[40px]">
                     {speaker.title}
                   </p>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="w-full"
-                    asChild
-                  >
-                    <a
-                      href={speaker.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2"
+                  <div className="flex flex-col gap-2">
+                    {hasDetailPage(speaker.name) && (
+                      <Button
+                        variant="default"
+                        size="sm"
+                        className="w-full"
+                        asChild
+                      >
+                        <Link to={getDetailPageLink(speaker.name)!}>
+                          View Talk Details
+                        </Link>
+                      </Button>
+                    )}
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full"
+                      asChild
                     >
-                      Website
-                      <ExternalLink className="h-4 w-4" />
-                    </a>
-                  </Button>
+                      <a
+                        href={speaker.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2"
+                      >
+                        Website
+                        <ExternalLink className="h-4 w-4" />
+                      </a>
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             ))}
