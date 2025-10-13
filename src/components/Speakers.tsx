@@ -137,7 +137,8 @@ const Speakers = () => {
            speakerName === "Dr. Fatemeh Fard" ||
            speakerName === "Pr. Raula Gaikovina Kula" ||
            speakerName === "Pr. Katsuro Inoue" ||
-           speakerName === "Pr. Sarah Nadi";
+           speakerName === "Pr. Sarah Nadi" ||
+           speakerName === "Pr. Houari Sahraoui";
   };
 
   const getDetailPageLink = (speakerName: string) => {
@@ -173,6 +174,9 @@ const Speakers = () => {
     }
     if (speakerName === "Pr. Sarah Nadi") {
       return "/speakers/sarah-nadi";
+    }
+    if (speakerName === "Pr. Houari Sahraoui") {
+      return "/speakers/houari-sahraoui";
     }
     return null;
   };
