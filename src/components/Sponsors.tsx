@@ -8,7 +8,7 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import smaLogo from "@/assets/sma.png";
+import atpuLogo from "@/assets/atpu.png";
 import africaTechLogo from "@/assets/africa-tech.png";
 import issatLogo from "@/assets/issat.png";
 import nvidiaLogo from "@/assets/nvidia.png";
@@ -21,7 +21,7 @@ import sigsoftLogo from "@/assets/sigsoft.png";
 
 const Sponsors = () => {
   const sponsors = [
-    { name: "SMA Junior Entreprise", logo: smaLogo },
+    { name: "ATPU", logo: atpuLogo },
     { name: "Africa Tech Institute", logo: africaTechLogo },
     { name: "ISSAT Sousse", logo: issatLogo },
     { name: "NVIDIA", logo: nvidiaLogo },
