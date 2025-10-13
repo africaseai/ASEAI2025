@@ -18,6 +18,7 @@ import fatemehFard from "@/assets/fatemeh-fard.jpg";
 import manelAbdellatif from "@/assets/manel-abdellatif.png";
 import moatazChouchen from "@/assets/moataz-chouchen.jpg";
 import mohamedSaied from "@/assets/mohamed-saied.png";
+import sarahNadi from "@/assets/sarah-nadi.jpg";
 
 const Speakers = () => {
   const plenarySpeakers = [
@@ -117,6 +118,12 @@ const Speakers = () => {
       image: mohamedSaied,
       website: "https://www.ulaval.ca/",
     },
+    {
+      name: "Pr. Sarah Nadi",
+      title: "New York University Abu Dhabi (NYUAD), UAE",
+      image: sarahNadi,
+      website: "https://snadi.github.io/",
+    },
   ];
 
   const hasDetailPage = (speakerName: string) => {
@@ -129,7 +136,8 @@ const Speakers = () => {
            speakerName === "Pr. Ahmed E. Hassan" ||
            speakerName === "Dr. Fatemeh Fard" ||
            speakerName === "Pr. Raula Gaikovina Kula" ||
-           speakerName === "Pr. Katsuro Inoue";
+           speakerName === "Pr. Katsuro Inoue" ||
+           speakerName === "Pr. Sarah Nadi";
   };
 
   const getDetailPageLink = (speakerName: string) => {
@@ -162,6 +170,9 @@ const Speakers = () => {
     }
     if (speakerName === "Pr. Katsuro Inoue") {
       return "/speakers/katsuro-inoue";
+    }
+    if (speakerName === "Pr. Sarah Nadi") {
+      return "/speakers/sarah-nadi";
     }
     return null;
   };
