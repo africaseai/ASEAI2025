@@ -120,7 +120,9 @@ const Speakers = () => {
   ];
 
   const hasDetailPage = (speakerName: string) => {
-    return speakerName === "Dr. Moataz Chouchen" || speakerName === "Pr. Bruce R. Maxim";
+    return speakerName === "Dr. Moataz Chouchen" || 
+           speakerName === "Pr. Bruce R. Maxim" ||
+           speakerName === "Pr. Michel Chaudron";
   };
 
   const getDetailPageLink = (speakerName: string) => {
@@ -129,6 +131,9 @@ const Speakers = () => {
     }
     if (speakerName === "Pr. Bruce R. Maxim") {
       return "/speakers/bruce-maxim";
+    }
+    if (speakerName === "Pr. Michel Chaudron") {
+      return "/speakers/michel-chaudron";
     }
     return null;
   };
