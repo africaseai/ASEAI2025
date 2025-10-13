@@ -123,7 +123,8 @@ const Speakers = () => {
     return speakerName === "Dr. Moataz Chouchen" || 
            speakerName === "Pr. Bruce R. Maxim" ||
            speakerName === "Pr. Michel Chaudron" ||
-           speakerName === "Pr. Lionel Briand";
+           speakerName === "Pr. Lionel Briand" ||
+           speakerName === "Pr. Walid Maalej";
   };
 
   const getDetailPageLink = (speakerName: string) => {
@@ -138,6 +139,9 @@ const Speakers = () => {
     }
     if (speakerName === "Pr. Lionel Briand") {
       return "/speakers/lionel-briand";
+    }
+    if (speakerName === "Pr. Walid Maalej") {
+      return "/speakers/walid-maalej";
     }
     return null;
   };
