@@ -34,7 +34,7 @@ const Speakers = () => {
     },
     {
       name: "Pr. Katsuro Inoue",
-      title: "Nanzan University, Japan",
+      title: "Ritsumeikan University, Japan",
       image: katsuroInoue,
       website: "https://www.nanzan-u.ac.jp/English/",
     },
