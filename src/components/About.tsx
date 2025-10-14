@@ -51,7 +51,7 @@ const About = () => {
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="text-center space-y-4">
             <h2 className="text-3xl md:text-5xl font-bold">
-              Shaping Africa's AI Future
+              Shaping Africa's Software Engineering and AI Future
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
           </div>
