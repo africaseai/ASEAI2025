@@ -199,12 +199,17 @@ const Registration = () => {
           {/* Registration Deadline */}
           <div className="text-center">
             <Card className="inline-block border-0 shadow-lg" style={{ boxShadow: "var(--card-shadow)" }}>
-              <CardContent className="p-6">
+              <CardContent className="p-6 space-y-4">
                 <p className="text-lg">
                   <span className="text-muted-foreground">Registration deadline:</span>{" "}
                   <span className="font-bold text-primary text-xl">30 October 2025</span>
                 </p>
-                <p className="text-sm text-muted-foreground mt-2">
+                <div className="bg-amber-500/10 border border-amber-500/20 p-4 rounded-lg">
+                  <p className="text-sm font-medium text-amber-900 dark:text-amber-100">
+                    ⚠️ Note: We have a limited number of places. The registration for in-person attendance will be closed as soon as the number of available places is filled.
+                  </p>
+                </div>
+                <p className="text-sm text-muted-foreground">
                   Admitted participants will be notified via email by November 3rd, 2025
                 </p>
               </CardContent>
