@@ -24,7 +24,7 @@ const Organizers = () => {
     },
     {
       name: "Dr. Maha Khemdja",
-      title: "ISSAF Sousse, Tunisia",
+      title: "ISSAT Sousse, Tunisia",
       image: mahaKhemdja,
       email: "maha.khemdja@issatso.u-sousse.tn",
       website: "https://www.issatso.rnu.tn/",
