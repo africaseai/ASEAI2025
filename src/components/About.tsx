@@ -1,5 +1,6 @@
 import { TrendingUp, Users, Globe, Sparkles } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import flyerImage from "@/assets/aseai-flyer.png";
 
 const About = () => {
   const stats = [
@@ -65,6 +66,15 @@ const About = () => {
               professionals with hands-on knowledge and deep insights into the future of 
               Software Engineering in the era of AI.
             </p>
+          </div>
+
+          {/* Event Flyer */}
+          <div className="mt-12">
+            <img 
+              src={flyerImage} 
+              alt="ASEAI 2025 - 1st African Winter School on Software Engineering & AI event flyer" 
+              className="w-full rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
+            />
           </div>
         </div>
       </div>
