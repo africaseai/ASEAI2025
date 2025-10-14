@@ -22,6 +22,7 @@ import sarahNadi from "@/assets/sarah-nadi.jpg";
 
 const Speakers = () => {
   const plenarySpeakers = [
+    // Row 1 (positions 1-4)
     {
       name: "Pr. Ahmed E. Hassan",
       title: "Queen's University, Canada",
@@ -46,6 +47,7 @@ const Speakers = () => {
       image: houariSahraoui,
       website: "https://diro.umontreal.ca/repertoire-departement/professeurs/professeur/in/in14695/sg/Houari%20Sahraoui/",
     },
+    // Row 2 (positions 5-8) - Sarah is here
     {
       name: "Pr. Yann-Gaël Guéhéneuc",
       title: "Concordia University, Canada",
@@ -59,11 +61,18 @@ const Speakers = () => {
       website: "https://www.inf.uni-hamburg.de/en/inst/ab/se/people/maalej.html",
     },
     {
+      name: "Pr. Sarah Nadi",
+      title: "New York University Abu Dhabi (NYUAD), UAE",
+      image: sarahNadi,
+      website: "https://snadi.github.io/",
+    },
+    {
       name: "Dr. Simon Peyton Jones",
       title: "Microsoft Research Cambridge, UK",
       image: simonPeytonJones,
       website: "https://www.microsoft.com/en-us/research/people/simonpj/",
     },
+    // Row 3 (positions 9-12) - Fatemeh is here
     {
       name: "Pr. Michel Chaudron",
       title: "Eindhoven University of Technology, Netherlands",
@@ -77,11 +86,18 @@ const Speakers = () => {
       website: "https://professeurs.uqam.ca/professeur/mili.hafedh/",
     },
     {
+      name: "Dr. Fatemeh Fard",
+      title: "University of British Columbia, Canada",
+      image: fatemehFard,
+      website: "https://fard.people.ubc.ca/",
+    },
+    {
       name: "Pr. Raula Gaikovina Kula",
       title: "Osaka University, Japan",
       image: raulaKula,
       website: "https://raux.github.io/",
     },
+    // Row 4 (positions 13-16) - Manel is last
     {
       name: "Pr. Bruce R. Maxim",
       title: "University of Michigan-Dearborn, USA",
@@ -93,18 +109,6 @@ const Speakers = () => {
       title: "SnT, University of Luxembourg",
       image: tegawendeBissyande,
       website: "https://bissyande.github.io/",
-    },
-    {
-      name: "Dr. Fatemeh Fard",
-      title: "University of British Columbia, Canada",
-      image: fatemehFard,
-      website: "https://fard.people.ubc.ca/",
-    },
-    {
-      name: "Dr. Manel Abelllatif",
-      title: "ÉTS Montreal, Canada",
-      image: manelAbdellatif,
-      website: "https://www.etsmtl.ca/",
     },
     {
       name: "Dr. Moataz Chouchen",
@@ -119,10 +123,10 @@ const Speakers = () => {
       website: "https://www.ulaval.ca/",
     },
     {
-      name: "Pr. Sarah Nadi",
-      title: "New York University Abu Dhabi (NYUAD), UAE",
-      image: sarahNadi,
-      website: "https://snadi.github.io/",
+      name: "Dr. Manel Abelllatif",
+      title: "ÉTS Montreal, Canada",
+      image: manelAbdellatif,
+      website: "https://www.etsmtl.ca/",
     },
   ];
 
