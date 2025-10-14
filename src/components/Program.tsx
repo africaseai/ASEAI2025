@@ -7,6 +7,9 @@ const Program = () => {
           <div className="text-center space-y-4">
             <h2 className="text-3xl md:text-5xl font-bold">Winter School Program</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
+            <p className="text-muted-foreground text-lg">
+              The full program will be announced soon. Below are the confirmed talks:
+            </p>
           </div>
 
           {/* Talks List */}
