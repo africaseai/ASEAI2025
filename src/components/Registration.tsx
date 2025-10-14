@@ -44,7 +44,7 @@ const Registration = () => {
                     asChild
                   >
                     <a 
-                      href="https://forms.gle/BeYvwwqjuQm5diPPu5" 
+                      href="https://forms.gle/VAE3EkRv3TdjWbdE8" 
                       target="_blank" 
                       rel="noopener noreferrer"
                     >
@@ -55,7 +55,7 @@ const Registration = () => {
                 </div>
                 <div className="flex-shrink-0">
                   <a 
-                    href="https://forms.gle/BeYvwwqjuQm5diPPu5" 
+                    href="https://forms.gle/VAE3EkRv3TdjWbdE8" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="block"
