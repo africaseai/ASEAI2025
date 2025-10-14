@@ -1,4 +1,4 @@
-import { TrendingUp, Users, Globe, Sparkles, Download } from "lucide-react";
+import { TrendingUp, Users, Globe, Sparkles, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import flyerImage from "@/assets/aseai-flyer.png";
@@ -83,8 +83,8 @@ const About = () => {
                 className="gap-2"
               >
                 <a href="/aseai-2025-flyer.pdf" target="_blank" rel="noopener noreferrer">
-                  <Download className="h-5 w-5" />
-                  Download Event Flyer (PDF)
+                  <ExternalLink className="h-5 w-5" />
+                  View Event Flyer (PDF)
                 </a>
               </Button>
             </div>
