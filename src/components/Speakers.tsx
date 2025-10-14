@@ -97,7 +97,7 @@ const Speakers = () => {
       image: raulaKula,
       website: "https://raux.github.io/",
     },
-    // Row 4 (positions 13-16) - Manel is last
+    // Row 4 (positions 13-16) - Manel is last in this row
     {
       name: "Pr. Bruce R. Maxim",
       title: "University of Michigan-Dearborn, USA",
@@ -117,16 +117,17 @@ const Speakers = () => {
       website: "https://www.concordia.ca/faculty/moataz-chouchen.html",
     },
     {
-      name: "Dr. Mohamed Aymen Saied",
-      title: "Université Laval, Canada",
-      image: mohamedSaied,
-      website: "https://www.ulaval.ca/",
-    },
-    {
       name: "Dr. Manel Abelllatif",
       title: "ÉTS Montreal, Canada",
       image: manelAbdellatif,
       website: "https://www.etsmtl.ca/",
+    },
+    // Row 5 (position 17)
+    {
+      name: "Dr. Mohamed Aymen Saied",
+      title: "Université Laval, Canada",
+      image: mohamedSaied,
+      website: "https://www.ulaval.ca/",
     },
   ];
 
