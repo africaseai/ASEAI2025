@@ -1,5 +1,6 @@
-import { TrendingUp, Users, Globe, Sparkles } from "lucide-react";
+import { TrendingUp, Users, Globe, Sparkles, Download } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import flyerImage from "@/assets/aseai-flyer.png";
 
 const About = () => {
@@ -69,12 +70,24 @@ const About = () => {
           </div>
 
           {/* Event Flyer */}
-          <div className="mt-12">
+          <div className="mt-12 space-y-6">
             <img 
               src={flyerImage} 
               alt="ASEAI 2025 - 1st African Winter School on Software Engineering & AI event flyer" 
               className="w-full rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
             />
+            <div className="flex justify-center">
+              <Button
+                asChild
+                size="lg"
+                className="gap-2"
+              >
+                <a href="/aseai-2025-flyer.pdf" target="_blank" rel="noopener noreferrer">
+                  <Download className="h-5 w-5" />
+                  Download Event Flyer (PDF)
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
