@@ -35,12 +35,21 @@ const RedirectHandler = () => {
   return null;
 };
 
+const SiteRedirect = () => {
+  useEffect(() => {
+    window.location.href = "https://conf.researchr.org/home/aseai-2025";
+  }, []);
+  
+  return null;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter basename="/ASEAI2025">
+        <SiteRedirect />
         <RedirectHandler />
         <Routes>
           <Route path="/" element={<Index />} />
