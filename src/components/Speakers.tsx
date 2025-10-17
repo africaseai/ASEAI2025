@@ -58,7 +58,7 @@ const Speakers = () => {
       name: "Pr. Walid Maalej",
       title: "University of Hamburg, Germany",
       image: walidMaalej,
-      website: "https://www.inf.uni-hamburg.de/en/inst/ab/se/people/maalej.html",
+      website: "https://maalejw.github.io/",
     },
     {
       name: "Pr. Sarah Nadi",

@@ -45,23 +45,44 @@ const WalidMaalej = () => {
               </div>
             </Card>
 
-            {/* Talk Details */}
+            {/* Talk 1 */}
             <Card>
               <CardContent className="p-6 space-y-6">
                 <div>
-                  <h2 className="text-2xl font-bold mb-3">Talk Title</h2>
-                  <p className="text-lg">
-                    On Hard and Soft Skills for Surviving Your PhD Journey
-                  </p>
+                  <h2 className="text-2xl font-bold mb-3">Talk 1: On Hard and Soft Skills for Surviving Your PhD Journey</h2>
                 </div>
 
                 <div>
-                  <h2 className="text-2xl font-bold mb-3">Abstract</h2>
+                  <h3 className="text-xl font-semibold mb-2">Abstract</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     In this talk I will reflect on the importance of two types of improvable skills for mastering the difficult challenge of a doctoral thesis, particularly in a field like software engineering or AI. Hard skills mainly cover the ability to overview and master technology as well as to efficiently combine scientific methods. Soft skills mainly include strategic communication, (self-)motivation and dedication, as well as trust in yourself and your advisors.
                   </p>
                 </div>
+              </CardContent>
+            </Card>
 
+            {/* Talk 2 */}
+            <Card>
+              <CardContent className="p-6 space-y-6">
+                <div>
+                  <h2 className="text-2xl font-bold mb-3">Talk 2: Generative Requirements Engineering and Design</h2>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Abstract</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Software development projects often fail not due to technical issues, but rather because of misunderstood user needs and missing requirements. As the Turing Award Winner Fred Brooks famously said, "the hardest single part of building a software system is deciding precisely what to build."
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed mt-4">
+                    In this talk, I will reflect on how, in my research journey, I tried to tackle this hard challenge by leveraging data science and machine learning to make users and their feedback a first-order concern in software engineering. I will also discuss how Generative AI, which is currently reshaping software engineering, can be tightened to effectively address the requirements and design challenge, and conclude by highlighting pitfalls and new emerging issues.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Biography */}
+            <Card>
+              <CardContent className="p-6 space-y-6">
                 <div>
                   <h2 className="text-2xl font-bold mb-3">Biography</h2>
                   <p className="text-muted-foreground leading-relaxed">
