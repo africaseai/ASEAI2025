@@ -119,16 +119,16 @@ const Speakers = () => {
       website: "https://bissyande.github.io/",
     },
     {
-      name: "Dr. Moataz Chouchen",
-      title: "Concordia University, Canada",
-      image: moatazChouchen,
-      website: "https://www.concordia.ca/faculty/moataz-chouchen.html",
-    },
-    {
       name: "Dr. Manel Abelllatif",
       title: "ÉTS Montreal, Canada",
       image: manelAbdellatif,
       website: "https://www.etsmtl.ca/",
+    },
+    {
+      name: "Dr. Moataz Chouchen",
+      title: "Concordia University, Canada",
+      image: moatazChouchen,
+      website: "https://www.concordia.ca/faculty/moataz-chouchen.html",
     },
     // Row 5 (positions 18-19)
     {
