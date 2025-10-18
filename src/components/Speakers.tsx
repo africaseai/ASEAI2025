@@ -19,6 +19,7 @@ import manelAbdellatif from "@/assets/manel-abdellatif.png";
 import moatazChouchen from "@/assets/moataz-chouchen.jpg";
 import mohamedSaied from "@/assets/mohamed-saied.png";
 import sarahNadi from "@/assets/sarah-nadi.jpg";
+import alvineBelle from "@/assets/alvine-belle.jpg";
 
 const Speakers = () => {
   const plenarySpeakers = [
@@ -122,12 +123,18 @@ const Speakers = () => {
       image: manelAbdellatif,
       website: "https://www.etsmtl.ca/",
     },
-    // Row 5 (position 17)
+    // Row 5 (positions 17-18)
     {
       name: "Dr. Mohamed Aymen Saied",
       title: "Université Laval, Canada",
       image: mohamedSaied,
       website: "https://www.ulaval.ca/",
+    },
+    {
+      name: "Pr. Alvine Boaye Belle",
+      title: "York University, Canada",
+      image: alvineBelle,
+      website: "https://lassonde.yorku.ca/users/alvinebelle",
     },
   ];
 
@@ -143,7 +150,8 @@ const Speakers = () => {
            speakerName === "Pr. Raula Gaikovina Kula" ||
            speakerName === "Pr. Katsuro Inoue" ||
            speakerName === "Pr. Sarah Nadi" ||
-           speakerName === "Pr. Houari Sahraoui";
+           speakerName === "Pr. Houari Sahraoui" ||
+           speakerName === "Pr. Alvine Boaye Belle";
   };
 
   const getDetailPageLink = (speakerName: string) => {
@@ -182,6 +190,9 @@ const Speakers = () => {
     }
     if (speakerName === "Pr. Houari Sahraoui") {
       return "/speakers/houari-sahraoui";
+    }
+    if (speakerName === "Pr. Alvine Boaye Belle") {
+      return "/speakers/alvine-belle";
     }
     return null;
   };
