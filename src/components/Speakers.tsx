@@ -20,6 +20,7 @@ import moatazChouchen from "@/assets/moataz-chouchen.jpg";
 import mohamedSaied from "@/assets/mohamed-saied.png";
 import sarahNadi from "@/assets/sarah-nadi.jpg";
 import alvineBelle from "@/assets/alvine-belle.jpg";
+import zadiaCodabux from "@/assets/zadia-codabux.png";
 
 const Speakers = () => {
   const plenarySpeakers = [
@@ -73,7 +74,7 @@ const Speakers = () => {
       image: simonPeytonJones,
       website: "https://www.microsoft.com/en-us/research/people/simonpj/",
     },
-    // Row 3 (positions 9-12) - Fatemeh is here
+    // Row 3 (positions 9-12)
     {
       name: "Pr. Michel Chaudron",
       title: "Eindhoven University of Technology, Netherlands",
@@ -81,10 +82,10 @@ const Speakers = () => {
       website: "https://research.tue.nl/en/persons/michel-chaudron",
     },
     {
-      name: "Pr. Hafedh Mili",
-      title: "Université du Québec à Montréal, Canada",
-      image: hafedhMili,
-      website: "https://professeurs.uqam.ca/professeur/mili.hafedh/",
+      name: "Dr. Zadia Codabux",
+      title: "University of Saskatchewan, Canada",
+      image: zadiaCodabux,
+      website: "https://www.cs.usask.ca/faculty/zadiacodabux/",
     },
     {
       name: "Dr. Fatemeh Fard",
@@ -92,13 +93,19 @@ const Speakers = () => {
       image: fatemehFard,
       website: "https://fard.people.ubc.ca/",
     },
+    // Row 4 (positions 13-17)
+    {
+      name: "Pr. Hafedh Mili",
+      title: "Université du Québec à Montréal, Canada",
+      image: hafedhMili,
+      website: "https://professeurs.uqam.ca/professeur/mili.hafedh/",
+    },
     {
       name: "Pr. Raula Gaikovina Kula",
       title: "Osaka University, Japan",
       image: raulaKula,
       website: "https://raux.github.io/",
     },
-    // Row 4 (positions 13-16) - Manel is last in this row
     {
       name: "Pr. Bruce R. Maxim",
       title: "University of Michigan-Dearborn, USA",
@@ -123,7 +130,7 @@ const Speakers = () => {
       image: manelAbdellatif,
       website: "https://www.etsmtl.ca/",
     },
-    // Row 5 (positions 17-18)
+    // Row 5 (positions 18-19)
     {
       name: "Dr. Mohamed Aymen Saied",
       title: "Université Laval, Canada",
