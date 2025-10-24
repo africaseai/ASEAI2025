@@ -116,7 +116,7 @@ const Speakers = () => {
       name: "Ms. Fatima Tambajang",
       title: "NVIDIA, USA",
       image: fatimaTambajang,
-      website: "https://www.nvidia.com/",
+      website: "https://blogs.nvidia.com/blog/author/ftambajang/",
     },
     {
       name: "Dr. Manel Abelllatif",

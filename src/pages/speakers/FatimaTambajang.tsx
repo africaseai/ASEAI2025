@@ -41,7 +41,7 @@ const FatimaTambajang = () => {
                 </p>
                 <Button variant="outline" size="lg" asChild className="w-fit">
                   <a
-                    href="https://www.nvidia.com/"
+                    href="https://blogs.nvidia.com/blog/author/ftambajang/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
