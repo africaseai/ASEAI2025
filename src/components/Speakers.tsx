@@ -162,7 +162,8 @@ const Speakers = () => {
            speakerName === "Dr. Zadia Codabux" ||
            speakerName === "Dr. Mohamed Aymen Saied" ||
            speakerName === "Ms. Fatima Tambajang" ||
-           speakerName === "Dr. Manel Abdellatif";
+           speakerName === "Dr. Manel Abdellatif" ||
+           speakerName === "Pr. Hafedh Mili";
   };
 
   const getDetailPageLink = (speakerName: string) => {
@@ -216,6 +217,9 @@ const Speakers = () => {
     }
     if (speakerName === "Dr. Manel Abdellatif") {
       return "/speakers/manel-abdellatif";
+    }
+    if (speakerName === "Pr. Hafedh Mili") {
+      return "/speakers/hafedh-mili";
     }
     return null;
   };
