@@ -1,19 +1,26 @@
 import { ArrowLeft, ExternalLink } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import alvineBelle from "@/assets/alvine-belle.jpg";
 
 const AlvineBelle = () => {
+  const navigate = useNavigate();
+
+  const handleBackClick = () => {
+    navigate('/');
+    setTimeout(() => {
+      document.getElementById('speakers')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <div className="container px-4 py-8">
-        <Link to="/#speakers">
-          <Button variant="ghost" className="mb-6">
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Speakers
-          </Button>
-        </Link>
+        <Button variant="ghost" className="mb-6" onClick={handleBackClick}>
+          <ArrowLeft className="mr-2 h-4 w-4" />
+          Back to Speakers
+        </Button>
 
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Speaker Header */}

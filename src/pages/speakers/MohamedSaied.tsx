@@ -1,19 +1,26 @@
 import { ArrowLeft, ExternalLink } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import mohamedSaied from "@/assets/mohamed-saied.png";
 
 const MohamedSaied = () => {
+  const navigate = useNavigate();
+
+  const handleBackClick = () => {
+    navigate('/');
+    setTimeout(() => {
+      document.getElementById('speakers')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted/30">
       <div className="container px-4 py-12">
-        <Link to="/#speakers">
-          <Button variant="ghost" className="mb-8">
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Speakers
-          </Button>
-        </Link>
+        <Button variant="ghost" className="mb-8" onClick={handleBackClick}>
+          <ArrowLeft className="mr-2 h-4 w-4" />
+          Back to Speakers
+        </Button>
 
         <div className="max-w-4xl mx-auto">
           <Card className="overflow-hidden border-0 shadow-xl">

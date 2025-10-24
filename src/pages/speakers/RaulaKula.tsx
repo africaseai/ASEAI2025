@@ -1,5 +1,5 @@
 import { ArrowLeft } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
@@ -7,6 +7,15 @@ import Footer from "@/components/Footer";
 import raulaKula from "@/assets/raula-kula.png";
 
 const RaulaKula = () => {
+  const navigate = useNavigate();
+
+  const handleBackClick = () => {
+    navigate('/');
+    setTimeout(() => {
+      document.getElementById('speakers')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -15,12 +24,10 @@ const RaulaKula = () => {
         <div className="container px-4">
           <div className="max-w-4xl mx-auto space-y-8">
             {/* Back Button */}
-            <Link to="/#speakers">
-              <Button variant="ghost" className="gap-2">
-                <ArrowLeft className="h-4 w-4" />
-                Back to Speakers
-              </Button>
-            </Link>
+            <Button variant="ghost" className="gap-2" onClick={handleBackClick}>
+              <ArrowLeft className="h-4 w-4" />
+              Back to Speakers
+            </Button>
 
             {/* Speaker Header */}
             <Card className="overflow-hidden">
