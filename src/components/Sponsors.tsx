@@ -18,6 +18,7 @@ import etsLogo from "@/assets/ets.png";
 import novationCityLogo from "@/assets/novation-city.png";
 import universityOfSousseLogo from "@/assets/university-of-sousse.png";
 import sigsoftLogo from "@/assets/sigsoft.png";
+import medtechLogo from "@/assets/medtech.png";
 
 const Sponsors = () => {
   const sponsors = [
@@ -31,6 +32,7 @@ const Sponsors = () => {
     { name: "Novation City", logo: novationCityLogo },
     { name: "University of Sousse", logo: universityOfSousseLogo },
     { name: "SIGSOFT", logo: sigsoftLogo },
+    { name: "MedTech", logo: medtechLogo },
   ];
 
   return (
