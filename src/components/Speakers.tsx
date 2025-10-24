@@ -119,7 +119,7 @@ const Speakers = () => {
       website: "https://blogs.nvidia.com/blog/author/ftambajang/",
     },
     {
-      name: "Dr. Manel Abelllatif",
+      name: "Dr. Manel Abdellatif",
       title: "ÉTS Montreal, Canada",
       image: manelAbdellatif,
       website: "https://www.etsmtl.ca/",
@@ -161,7 +161,8 @@ const Speakers = () => {
            speakerName === "Dr. Alvine Boaye Belle" ||
            speakerName === "Dr. Zadia Codabux" ||
            speakerName === "Dr. Mohamed Aymen Saied" ||
-           speakerName === "Ms. Fatima Tambajang";
+           speakerName === "Ms. Fatima Tambajang" ||
+           speakerName === "Dr. Manel Abdellatif";
   };
 
   const getDetailPageLink = (speakerName: string) => {
@@ -212,6 +213,9 @@ const Speakers = () => {
     }
     if (speakerName === "Ms. Fatima Tambajang") {
       return "/speakers/fatima-tambajang";
+    }
+    if (speakerName === "Dr. Manel Abdellatif") {
+      return "/speakers/manel-abdellatif";
     }
     return null;
   };
