@@ -52,7 +52,7 @@ const ZadiaCodabux = () => {
               <CardContent className="p-0 space-y-8">
                 <div>
                   <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                    Phyinally Done: Life Beyond the Ivory Tower
+                    Phinally Done: Life Beyond the Ivory Tower
                   </h2>
                 </div>
 
