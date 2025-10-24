@@ -13,7 +13,7 @@ import michelChaudron from "@/assets/michel-chaudron.png";
 import hafedhMili from "@/assets/hafedh-mili.jpg";
 import bruceMaxim from "@/assets/bruce-maxim.jpg";
 import raulaKula from "@/assets/raula-kula.png";
-import tegawendeBissyande from "@/assets/tegawende-bissyande.png";
+import fatimaTambajang from "@/assets/fatima-tambajang.jpg";
 import fatemehFard from "@/assets/fatemeh-fard.jpg";
 import manelAbdellatif from "@/assets/manel-abdellatif.png";
 import moatazChouchen from "@/assets/moataz-chouchen.jpg";
@@ -113,10 +113,10 @@ const Speakers = () => {
       website: "https://umdearborn.edu/users/bmaxim",
     },
     {
-      name: "Pr. Tegawendé F. Bissyandé",
-      title: "SnT, University of Luxembourg",
-      image: tegawendeBissyande,
-      website: "https://bissyande.github.io/",
+      name: "Ms. Fatima Tambajang",
+      title: "NVIDIA, USA",
+      image: fatimaTambajang,
+      website: "https://www.nvidia.com/",
     },
     {
       name: "Dr. Manel Abelllatif",
@@ -160,7 +160,8 @@ const Speakers = () => {
            speakerName === "Pr. Houari Sahraoui" ||
            speakerName === "Pr. Alvine Boaye Belle" ||
            speakerName === "Dr. Zadia Codabux" ||
-           speakerName === "Dr. Mohamed Aymen Saied";
+           speakerName === "Dr. Mohamed Aymen Saied" ||
+           speakerName === "Ms. Fatima Tambajang";
   };
 
   const getDetailPageLink = (speakerName: string) => {
@@ -208,6 +209,9 @@ const Speakers = () => {
     }
     if (speakerName === "Dr. Mohamed Aymen Saied") {
       return "/speakers/mohamed-saied";
+    }
+    if (speakerName === "Ms. Fatima Tambajang") {
+      return "/speakers/fatima-tambajang";
     }
     return null;
   };
