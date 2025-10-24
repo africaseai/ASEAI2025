@@ -138,7 +138,7 @@ const Speakers = () => {
       website: "https://www.ulaval.ca/",
     },
     {
-      name: "Pr. Alvine Boaye Belle",
+      name: "Dr. Alvine Boaye Belle",
       title: "York University, Canada",
       image: alvineBelle,
       website: "https://lassonde.yorku.ca/users/alvinebelle",
@@ -158,7 +158,7 @@ const Speakers = () => {
            speakerName === "Pr. Katsuro Inoue" ||
            speakerName === "Pr. Sarah Nadi" ||
            speakerName === "Pr. Houari Sahraoui" ||
-           speakerName === "Pr. Alvine Boaye Belle" ||
+           speakerName === "Dr. Alvine Boaye Belle" ||
            speakerName === "Dr. Zadia Codabux" ||
            speakerName === "Dr. Mohamed Aymen Saied" ||
            speakerName === "Ms. Fatima Tambajang";
@@ -201,7 +201,7 @@ const Speakers = () => {
     if (speakerName === "Pr. Houari Sahraoui") {
       return "/speakers/houari-sahraoui";
     }
-    if (speakerName === "Pr. Alvine Boaye Belle") {
+    if (speakerName === "Dr. Alvine Boaye Belle") {
       return "/speakers/alvine-belle";
     }
     if (speakerName === "Dr. Zadia Codabux") {
