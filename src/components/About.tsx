@@ -82,7 +82,7 @@ const About = () => {
                 size="lg"
                 className="gap-2"
               >
-                <a href="https://africaseai.github.io/ASEAI2025/aseai-2025-flyer.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/aseai-2025-flyer.pdf" target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="h-5 w-5" />
                   View Event Flyer (PDF)
                 </a>
