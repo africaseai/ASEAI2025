@@ -40,9 +40,7 @@ const About = () => {
             >
               <CardContent className="p-6 text-center">
                 <stat.icon className="h-8 w-8 md:h-10 md:w-10 mx-auto mb-4 text-primary" />
-                <div className="text-2xl md:text-3xl font-bold text-foreground mb-2">
-                  {stat.value}
-                </div>
+                <div className="text-2xl md:text-3xl font-bold text-foreground mb-2">{stat.value}</div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
               </CardContent>
             </Card>
@@ -52,37 +50,34 @@ const About = () => {
         {/* Main Content */}
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="text-center space-y-4">
-            <h2 className="text-3xl md:text-5xl font-bold">
-              Shaping Africa's Software Engineering and AI Future
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold">Shaping Africa's Software Engineering and AI Future</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
           </div>
 
           <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
             <p>
-              The Winter School brings world-class scholars from the globe to Africa, 
-              to share knowledge, inspire creativity, and build lasting collaborations. 
-              Through interactive sessions, mentoring, and cutting-edge talks, the mission 
-              of the school is to empower the next generation of students, researchers, and 
-              professionals with hands-on knowledge and deep insights into the future of 
-              Software Engineering in the era of AI.
+              The Winter School brings world-class scholars from the globe to Africa, to share knowledge, inspire
+              creativity, and build lasting collaborations. Through interactive sessions, mentoring, and cutting-edge
+              talks, the mission of the school is to empower the next generation of students, researchers, and
+              professionals with hands-on knowledge and deep insights into the future of Software Engineering in the era
+              of AI.
             </p>
           </div>
 
           {/* Event Flyer */}
           <div className="mt-12 space-y-6">
-            <img 
-              src={flyerImage} 
-              alt="ASEAI 2025 - 1st African Winter School on Software Engineering & AI event flyer" 
+            <img
+              src={flyerImage}
+              alt="ASEAI 2025 - 1st African Winter School on Software Engineering & AI event flyer"
               className="w-full rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
             />
             <div className="flex justify-center">
-              <Button
-                asChild
-                size="lg"
-                className="gap-2"
-              >
-                <a href="/aseai-2025-flyer.pdf" target="_blank" rel="noopener noreferrer">
+              <Button asChild size="lg" className="gap-2">
+                <a
+                  href="https://africaseai.github.io/ASEAI2025/aseai-2025-flyer.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <ExternalLink className="h-5 w-5" />
                   View Event Flyer (PDF)
                 </a>
