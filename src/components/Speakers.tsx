@@ -63,8 +63,8 @@ const Speakers = () => {
       website: "https://maalejw.github.io/",
     },
     {
-      name: "Pr. Sarah Nadi",
-      title: "New York University Abu Dhabi (NYUAD), UAE",
+      name: "Dr. Sarah Nadi",
+      title: "New York University Abu Dhabi, UAE",
       image: sarahNadi,
       website: "https://snadi.github.io/",
     },
@@ -156,7 +156,7 @@ const Speakers = () => {
            speakerName === "Dr. Fatemeh Fard" ||
            speakerName === "Pr. Raula Gaikovina Kula" ||
            speakerName === "Pr. Katsuro Inoue" ||
-           speakerName === "Pr. Sarah Nadi" ||
+           speakerName === "Dr. Sarah Nadi" ||
            speakerName === "Pr. Houari Sahraoui" ||
            speakerName === "Dr. Alvine Boaye Belle" ||
            speakerName === "Dr. Zadia Codabux" ||
@@ -197,7 +197,7 @@ const Speakers = () => {
     if (speakerName === "Pr. Katsuro Inoue") {
       return "/speakers/katsuro-inoue";
     }
-    if (speakerName === "Pr. Sarah Nadi") {
+    if (speakerName === "Dr. Sarah Nadi") {
       return "/speakers/sarah-nadi";
     }
     if (speakerName === "Pr. Houari Sahraoui") {

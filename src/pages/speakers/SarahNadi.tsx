@@ -42,10 +42,10 @@ const SarahNadi = () => {
                 <CardContent className="p-6 flex flex-col justify-center space-y-4">
                   <div>
                     <h1 className="text-3xl md:text-4xl font-bold mb-2">
-                      Pr. Sarah Nadi
+                      Dr. Sarah Nadi
                     </h1>
                     <p className="text-lg text-muted-foreground">
-                      New York University Abu Dhabi (NYUAD), UAE
+                      New York University Abu Dhabi, UAE
                     </p>
                   </div>
                 </CardContent>
