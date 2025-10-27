@@ -150,7 +150,7 @@ const Registration = () => {
               <CardContent className="p-6 space-y-4">
                 <p className="text-lg">
                   <span className="text-muted-foreground">Registration deadline:</span>{" "}
-                  <span className="font-bold text-primary text-xl">30 October 2025</span>
+                  <span className="font-bold text-primary text-xl">2 November 2025</span>
                 </p>
                 <div className="bg-amber-500/10 border border-amber-500/20 p-4 rounded-lg">
                   <p className="text-sm font-medium text-amber-900 dark:text-amber-100">
@@ -158,7 +158,7 @@ const Registration = () => {
                   </p>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Admitted participants will be notified via email by November 3rd, 2025
+                  Admitted participants will be notified via email by November 5th, 2025
                 </p>
               </CardContent>
             </Card>
