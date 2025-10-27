@@ -1,7 +1,7 @@
 import { TrendingUp, Users, Globe, Sparkles, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import flyerImage from "@/assets/aseai-flyer.png";
+import flyerImage from "@/assets/aseai-flyer.jpg";
 
 const About = () => {
   const stats = [
