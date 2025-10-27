@@ -34,7 +34,7 @@ const Program = () => {
                 { speaker: "Dr. Manel Abdellatif", title: "Ensuring Trust: Testing and Safety Monitoring of Deep Learning-based Systems" },
                 { speaker: "Dr. Moataz Chouchen", title: "Automating Code Review: From Heuristics to Agentic AI" },
                 { speaker: "Dr. Mohamed Aymen Saied", title: "From Monolith to Microservices — A Journey Powered by LLMs and the Open Challenges Ahead" },
-                { speaker: "Dr. Alvine Boaye Belle", title: "System assurance in the era of Large Language Models" },
+                { speaker: "Pr. Alvine Boaye Belle", title: "System assurance in the era of Large Language Models" },
               ].map((talk, index) => (
                 <div key={index} className="border-l-4 border-primary pl-4 py-2">
                   <h3 className="font-semibold text-lg text-foreground">{talk.speaker}</h3>
