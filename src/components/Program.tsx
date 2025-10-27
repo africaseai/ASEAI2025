@@ -23,7 +23,7 @@ const Program = () => {
                 { speaker: "Pr. Yann-Gaël Guéhéneuc", title: "TBA" },
                 { speaker: "Pr. Walid Maalej", title: "On Hard and Soft Skills for Surviving Your PhD Journey\nGenerative Requirements Engineering and Design" },
                 { speaker: "Dr. Sarah Nadi", title: "Navigating Graduate School and Beyond\nThe Chronicles of a Professor" },
-                { speaker: "Dr. Simon Peyton Jones", title: "How to write a great research paper" },
+                { speaker: "Pr. Simon Peyton Jones", title: "How to write a great research paper" },
                 { speaker: "Pr. Michel Chaudron", title: "On Software Architecture" },
                 { speaker: "Dr. Zadia Codabux", title: "Phinally Done: Life Beyond the Ivory Tower" },
                 { speaker: "Dr. Fatemeh Fard", title: "LLM-Based Agents for Software Engineering: Benefits and Drawbacks" },

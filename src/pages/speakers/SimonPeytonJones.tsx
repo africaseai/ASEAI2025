@@ -42,7 +42,7 @@ const SimonPeytonJones = () => {
                 <CardContent className="p-6 flex flex-col justify-center space-y-4">
                   <div>
                     <h1 className="text-3xl md:text-4xl font-bold mb-2">
-                      Dr. Simon Peyton Jones
+                      Pr. Simon Peyton Jones
                     </h1>
                     <p className="text-lg text-muted-foreground">
                       Microsoft Research Cambridge, UK

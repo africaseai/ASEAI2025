@@ -69,7 +69,7 @@ const Speakers = () => {
       website: "https://snadi.github.io/",
     },
     {
-      name: "Dr. Simon Peyton Jones",
+      name: "Pr. Simon Peyton Jones",
       title: "Microsoft Research Cambridge, UK",
       image: simonPeytonJones,
       website: "https://www.microsoft.com/en-us/research/people/simonpj/",
@@ -151,7 +151,7 @@ const Speakers = () => {
            speakerName === "Pr. Michel Chaudron" ||
            speakerName === "Pr. Lionel Briand" ||
            speakerName === "Pr. Walid Maalej" ||
-           speakerName === "Dr. Simon Peyton Jones" ||
+           speakerName === "Pr. Simon Peyton Jones" ||
            speakerName === "Pr. Ahmed E. Hassan" ||
            speakerName === "Dr. Fatemeh Fard" ||
            speakerName === "Pr. Raula Gaikovina Kula" ||
@@ -182,7 +182,7 @@ const Speakers = () => {
     if (speakerName === "Pr. Walid Maalej") {
       return "/speakers/walid-maalej";
     }
-    if (speakerName === "Dr. Simon Peyton Jones") {
+    if (speakerName === "Pr. Simon Peyton Jones") {
       return "/speakers/simon-peyton-jones";
     }
     if (speakerName === "Pr. Ahmed E. Hassan") {
