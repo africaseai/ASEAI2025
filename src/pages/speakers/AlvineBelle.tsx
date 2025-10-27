@@ -28,13 +28,13 @@ const AlvineBelle = () => {
             <div className="w-64 h-64 rounded-lg overflow-hidden shadow-lg flex-shrink-0">
               <img
                 src={alvineBelle}
-                alt="Pr. Alvine Boaye Belle"
+                alt="Dr. Alvine Boaye Belle"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="flex-1 space-y-4">
               <div>
-                <h1 className="text-4xl font-bold mb-2">Pr. Alvine Boaye Belle</h1>
+                <h1 className="text-4xl font-bold mb-2">Dr. Alvine Boaye Belle</h1>
                 <p className="text-xl text-muted-foreground">
                   York University, Canada
                 </p>
