@@ -21,6 +21,7 @@ import mohamedSaied from "@/assets/mohamed-saied.png";
 import sarahNadi from "@/assets/sarah-nadi.jpg";
 import alvineBelle from "@/assets/alvine-belle.jpg";
 import zadiaCodabux from "@/assets/zadia-codabux.png";
+import prasunLala from "@/assets/prasun-lala.jpg";
 
 const Speakers = () => {
   const plenarySpeakers = [
@@ -143,6 +144,12 @@ const Speakers = () => {
       image: alvineBelle,
       website: "https://lassonde.yorku.ca/users/alvinebelle",
     },
+    {
+      name: "Mr. Prasun Lala",
+      title: "ÉTS Montréal, Université du Québec, Canada",
+      image: prasunLala,
+      website: "https://www.etsmtl.ca/en/auteur/prasun-lala",
+    },
   ];
 
   const hasDetailPage = (speakerName: string) => {
@@ -163,7 +170,8 @@ const Speakers = () => {
            speakerName === "Dr. Mohamed Aymen Saied" ||
            speakerName === "Ms. Fatima Tambajang" ||
            speakerName === "Dr. Manel Abdellatif" ||
-           speakerName === "Pr. Hafedh Mili";
+           speakerName === "Pr. Hafedh Mili" ||
+           speakerName === "Mr. Prasun Lala";
   };
 
   const getDetailPageLink = (speakerName: string) => {
@@ -220,6 +228,9 @@ const Speakers = () => {
     }
     if (speakerName === "Pr. Hafedh Mili") {
       return "/speakers/hafedh-mili";
+    }
+    if (speakerName === "Mr. Prasun Lala") {
+      return "/speakers/prasun-lala";
     }
     return null;
   };

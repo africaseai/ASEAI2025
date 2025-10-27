@@ -35,6 +35,8 @@ const Program = () => {
                 { speaker: "Dr. Moataz Chouchen", title: "Automating Code Review: From Heuristics to Agentic AI" },
                 { speaker: "Dr. Mohamed Aymen Saied", title: "From Monolith to Microservices — A Journey Powered by LLMs and the Open Challenges Ahead" },
                 { speaker: "Dr. Alvine Boaye Belle", title: "System assurance in the era of Large Language Models" },
+                { speaker: "Mr. Prasun Lala", title: "11 steps to structuring a manuscript" },
+                { speaker: "Mr. Prasun Lala", title: "Think like a reviewer" },
               ].map((talk, index) => (
                 <div key={index} className="border-l-4 border-primary pl-4 py-2">
                   <h3 className="font-semibold text-lg text-foreground">{talk.speaker}</h3>
