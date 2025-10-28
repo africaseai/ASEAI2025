@@ -171,7 +171,8 @@ const Speakers = () => {
            speakerName === "Ms. Fatima Tambajang" ||
            speakerName === "Dr. Manel Abdellatif" ||
            speakerName === "Pr. Hafedh Mili" ||
-           speakerName === "Mr. Prasun Lala";
+           speakerName === "Mr. Prasun Lala" ||
+           speakerName === "Pr. Yann-Gaël Guéhéneuc";
   };
 
   const getDetailPageLink = (speakerName: string) => {
@@ -231,6 +232,9 @@ const Speakers = () => {
     }
     if (speakerName === "Mr. Prasun Lala") {
       return "/speakers/prasun-lala";
+    }
+    if (speakerName === "Pr. Yann-Gaël Guéhéneuc") {
+      return "/speakers/yann-gael-gueheneuc";
     }
     return null;
   };

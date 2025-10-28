@@ -20,7 +20,7 @@ const Program = () => {
                 { speaker: "Pr. Lionel Briand", title: "Why and How to get a PhD?\nAutomated Testing and Safety Analysis of Deep Learning Systems" },
                 { speaker: "Pr. Katsuro Inoue", title: "Code Clones and Beyond: My Reflections on Software Engineering Research" },
                 { speaker: "Pr. Houari Sahraoui", title: "No Size Fits All: Goal-Driven Alignment of LLMs for Software Engineering Tasks" },
-                { speaker: "Pr. Yann-Gaël Guéhéneuc", title: "TBA" },
+                { speaker: "Pr. Yann-Gaël Guéhéneuc", title: "About Empirical Studies on Software Quality" },
                 { speaker: "Pr. Walid Maalej", title: "On Hard and Soft Skills for Surviving Your PhD Journey\nGenerative Requirements Engineering and Design" },
                 { speaker: "Dr. Sarah Nadi", title: "Navigating Graduate School and Beyond\nThe Chronicles of a Professor" },
                 { speaker: "Pr. Simon Peyton Jones", title: "How to write a great research paper" },
