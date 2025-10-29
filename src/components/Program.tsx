@@ -2,8 +2,65 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ExternalLink } from "lucide-react";
+import { formatInTimeZone, toZonedTime } from "date-fns-tz";
+import { useState, useEffect } from "react";
 
 const Program = () => {
+  const [userTimezone, setUserTimezone] = useState<string>("Africa/Tunis");
+  
+  useEffect(() => {
+    // Detect user's timezone
+    const detected = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    setUserTimezone(detected);
+  }, []);
+
+  // Convert Tunisia time to user's timezone
+  const convertTime = (dateStr: string, timeRange: string) => {
+    // dateStr format: "Day N - DayName, Mon DD, YYYY"
+    // timeRange format: "HH:MM–HH:MM" or "HH:MM"
+    
+    // Extract date from the day string
+    const dateMatch = dateStr.match(/(\w+) (\d+), (\d+)/);
+    if (!dateMatch) return timeRange;
+    
+    const [, month, day, year] = dateMatch;
+    const monthMap: { [key: string]: number } = {
+      "Jan": 0, "Feb": 1, "Mar": 2, "Apr": 3, "May": 4, "Jun": 5,
+      "Jul": 6, "Aug": 7, "Sep": 8, "Oct": 9, "Nov": 10, "Dec": 11
+    };
+    
+    // Parse the time range
+    const times = timeRange.split("–").map(t => t.trim());
+    
+    const convertSingleTime = (timeStr: string) => {
+      const [hours, minutes] = timeStr.split(":").map(Number);
+      
+      // If user is in Tunisia timezone, no conversion needed
+      if (userTimezone === "Africa/Tunis") {
+        return timeStr;
+      }
+      
+      try {
+        // Create a date string in Tunisia timezone
+        const tunisiaDateStr = `${year}-${String(monthMap[month] + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}T${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:00`;
+        
+        // Parse as if it's in Tunisia timezone and convert to user's timezone
+        const dateInTunisia = toZonedTime(tunisiaDateStr, "Africa/Tunis");
+        const formattedTime = formatInTimeZone(dateInTunisia, userTimezone, "HH:mm");
+        
+        return formattedTime;
+      } catch (error) {
+        console.error("Time conversion error:", error);
+        return timeStr;
+      }
+    };
+    
+    if (times.length === 2) {
+      return `${convertSingleTime(times[0])}–${convertSingleTime(times[1])}`;
+    }
+    return convertSingleTime(times[0]);
+  };
+
   const schedule = [
     {
       day: "Day 1 - Monday, Nov 24, 2025",
@@ -166,6 +223,11 @@ const Program = () => {
             <p className="text-muted-foreground text-lg">
               Four-day intensive program featuring keynotes, workshops, and networking events
             </p>
+            {userTimezone !== "Africa/Tunis" && (
+              <p className="text-sm text-muted-foreground">
+                Times shown in your local timezone ({userTimezone.replace(/_/g, " ")})
+              </p>
+            )}
           </div>
 
           {/* Schedule by Day */}
@@ -186,7 +248,7 @@ const Program = () => {
                         {/* Time */}
                         <div className="md:w-32 flex-shrink-0">
                           <Badge variant="outline" className="font-mono text-sm">
-                            {session.time}
+                            {convertTime(day.day, session.time)}
                           </Badge>
                         </div>
                         
