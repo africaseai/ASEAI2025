@@ -1,5 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
+import { ExternalLink } from "lucide-react";
 
 const Program = () => {
   const schedule = [
@@ -89,6 +91,68 @@ const Program = () => {
     }
   };
 
+  const hasDetailPage = (speakerName: string) => {
+    const speakersWithPages = [
+      "Dr. Moataz Chouchen", "Pr. Bruce R. Maxim", "Pr. Michel Chaudron",
+      "Pr. Lionel Briand", "Pr. Walid Maalej", "Pr. Simon Peyton Jones",
+      "Pr. Ahmed E. Hassan", "Dr. Fatemeh Fard", "Pr. Raula Gaikovina Kula",
+      "Pr. Katsuro Inoue", "Dr. Sarah Nadi", "Pr. Houari Sahraoui",
+      "Dr. Alvine Boaye Belle", "Alvine B. Belle", "Dr. Zadia Codabux",
+      "Dr. Mohamed Aymen Saied", "Mohamed Aymen Saied", "Ms. Fatima Tambajang",
+      "Fatima Tambajang", "Dr. Manel Abdellatif", "Manel Abdellatif",
+      "Pr. Hafedh Mili", "Hafedh Mili", "Mr. Prasun Lala", "Prasun Lala",
+      "Pr. Yann-Gaël Guéhéneuc", "Yann-Gaël Guéhéneuc"
+    ];
+    return speakersWithPages.includes(speakerName);
+  };
+
+  const getDetailPageLink = (speakerName: string) => {
+    const speakerMap: { [key: string]: string } = {
+      "Dr. Moataz Chouchen": "/speakers/moataz-chouchen",
+      "Moataz Chouchen": "/speakers/moataz-chouchen",
+      "Pr. Bruce R. Maxim": "/speakers/bruce-maxim",
+      "Bruce Maxim": "/speakers/bruce-maxim",
+      "Pr. Michel Chaudron": "/speakers/michel-chaudron",
+      "Michel Chaudron": "/speakers/michel-chaudron",
+      "Pr. Lionel Briand": "/speakers/lionel-briand",
+      "Lionel Briand": "/speakers/lionel-briand",
+      "Pr. Walid Maalej": "/speakers/walid-maalej",
+      "Walid Maalej": "/speakers/walid-maalej",
+      "Pr. Simon Peyton Jones": "/speakers/simon-peyton-jones",
+      "Simon Peyton Jones": "/speakers/simon-peyton-jones",
+      "Pr. Ahmed E. Hassan": "/speakers/ahmed-hassan",
+      "Ahmed E. Hassan": "/speakers/ahmed-hassan",
+      "Dr. Fatemeh Fard": "/speakers/fatemeh-fard",
+      "Fatemeh Fard": "/speakers/fatemeh-fard",
+      "Pr. Raula Gaikovina Kula": "/speakers/raula-kula",
+      "Raula Gaikovina Kula": "/speakers/raula-kula",
+      "Pr. Katsuro Inoue": "/speakers/katsuro-inoue",
+      "Katsuro Inoue": "/speakers/katsuro-inoue",
+      "Dr. Sarah Nadi": "/speakers/sarah-nadi",
+      "Sarah Nadi": "/speakers/sarah-nadi",
+      "Pr. Houari Sahraoui": "/speakers/houari-sahraoui",
+      "Houari Sahraoui": "/speakers/houari-sahraoui",
+      "Dr. Alvine Boaye Belle": "/speakers/alvine-belle",
+      "Alvine B. Belle": "/speakers/alvine-belle",
+      "Alvine Boaye Belle": "/speakers/alvine-belle",
+      "Dr. Zadia Codabux": "/speakers/zadia-codabux",
+      "Zadia Codabux": "/speakers/zadia-codabux",
+      "Dr. Mohamed Aymen Saied": "/speakers/mohamed-saied",
+      "Mohamed Aymen Saied": "/speakers/mohamed-saied",
+      "Ms. Fatima Tambajang": "/speakers/fatima-tambajang",
+      "Fatima Tambajang": "/speakers/fatima-tambajang",
+      "Dr. Manel Abdellatif": "/speakers/manel-abdellatif",
+      "Manel Abdellatif": "/speakers/manel-abdellatif",
+      "Pr. Hafedh Mili": "/speakers/hafedh-mili",
+      "Hafedh Mili": "/speakers/hafedh-mili",
+      "Mr. Prasun Lala": "/speakers/prasun-lala",
+      "Prasun Lala": "/speakers/prasun-lala",
+      "Pr. Yann-Gaël Guéhéneuc": "/speakers/yann-gael-gueheneuc",
+      "Yann-Gaël Guéhéneuc": "/speakers/yann-gael-gueheneuc"
+    };
+    return speakerMap[speakerName] || null;
+  };
+
   return (
     <section id="program" className="py-20 md:py-32 bg-background">
       <div className="container px-4">
@@ -111,11 +175,10 @@ const Program = () => {
               <div className="space-y-4">
                 {day.sessions.map((session, sessionIndex) => {
                   const eventType = getEventType(session.title);
-                  return (
-                  <Card 
-                    key={sessionIndex}
-                    className={`${getEventStyles(eventType)} hover:shadow-lg transition-shadow`}
-                  >
+                  const speakerHasPage = session.speaker && hasDetailPage(session.speaker);
+                  const detailLink = speakerHasPage ? getDetailPageLink(session.speaker) : null;
+                  
+                  const cardContent = (
                     <CardContent className="p-4 md:p-6">
                       <div className="flex flex-col md:flex-row gap-4">
                         {/* Time */}
@@ -127,13 +190,15 @@ const Program = () => {
                         
                         {/* Content */}
                         <div className="flex-1 space-y-2">
-                          <h4 className={`${eventType !== 'talk' ? 'text-base font-medium' : 'text-lg font-semibold'}`}>
+                          <h4 className={`${eventType !== 'talk' ? 'text-base font-medium' : 'text-lg font-semibold'} ${speakerHasPage ? 'flex items-center gap-2' : ''}`}>
                             {session.title}
+                            {speakerHasPage && <ExternalLink className="h-4 w-4 text-primary" />}
                           </h4>
                           
                           {session.speaker && (
                             <p className="text-muted-foreground">
                               <span className="font-medium text-foreground">Speaker:</span> {session.speaker}
+                              {speakerHasPage && <span className="text-xs ml-2 text-primary">(Click to view details)</span>}
                             </p>
                           )}
                           
@@ -157,7 +222,18 @@ const Program = () => {
                         )}
                       </div>
                     </CardContent>
-                  </Card>
+                  );
+
+                  return speakerHasPage && detailLink ? (
+                    <Link key={sessionIndex} to={detailLink}>
+                      <Card className={`${getEventStyles(eventType)} hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer`}>
+                        {cardContent}
+                      </Card>
+                    </Link>
+                  ) : (
+                    <Card key={sessionIndex} className={`${getEventStyles(eventType)} hover:shadow-lg transition-shadow`}>
+                      {cardContent}
+                    </Card>
                   );
                 })}
               </div>
