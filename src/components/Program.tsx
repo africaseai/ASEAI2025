@@ -93,13 +93,15 @@ const Program = () => {
 
   const hasDetailPage = (speakerName: string) => {
     const speakersWithPages = [
-      "Dr. Moataz Chouchen", "Pr. Bruce R. Maxim", "Pr. Michel Chaudron",
-      "Pr. Lionel Briand", "Pr. Walid Maalej", "Pr. Simon Peyton Jones",
-      "Pr. Ahmed E. Hassan", "Dr. Fatemeh Fard", "Pr. Raula Gaikovina Kula",
-      "Pr. Katsuro Inoue", "Dr. Sarah Nadi", "Pr. Houari Sahraoui",
-      "Dr. Alvine Boaye Belle", "Alvine B. Belle", "Dr. Zadia Codabux",
-      "Dr. Mohamed Aymen Saied", "Mohamed Aymen Saied", "Ms. Fatima Tambajang",
-      "Fatima Tambajang", "Dr. Manel Abdellatif", "Manel Abdellatif",
+      "Dr. Moataz Chouchen", "Moataz Chouchen", "Pr. Bruce R. Maxim", "Bruce Maxim",
+      "Pr. Michel Chaudron", "Michel Chaudron", "Pr. Lionel Briand", "Lionel Briand",
+      "Pr. Walid Maalej", "Walid Maalej", "Pr. Simon Peyton Jones", "Simon Peyton Jones",
+      "Pr. Ahmed E. Hassan", "Ahmed E. Hassan", "Dr. Fatemeh Fard", "Fatemeh Fard",
+      "Pr. Raula Gaikovina Kula", "Raula Gaikovina Kula", "Pr. Katsuro Inoue", "Katsuro Inoue",
+      "Dr. Sarah Nadi", "Sarah Nadi", "Pr. Houari Sahraoui", "Houari Sahraoui",
+      "Dr. Alvine Boaye Belle", "Alvine B. Belle", "Alvine Boaye Belle",
+      "Dr. Zadia Codabux", "Zadia Codabux", "Dr. Mohamed Aymen Saied", "Mohamed Aymen Saied",
+      "Ms. Fatima Tambajang", "Fatima Tambajang", "Dr. Manel Abdellatif", "Manel Abdellatif",
       "Pr. Hafedh Mili", "Hafedh Mili", "Mr. Prasun Lala", "Prasun Lala",
       "Pr. Yann-Gaël Guéhéneuc", "Yann-Gaël Guéhéneuc"
     ];
