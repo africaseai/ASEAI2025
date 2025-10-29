@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ExternalLink } from "lucide-react";
-import { formatInTimeZone, toZonedTime } from "date-fns-tz";
+import { formatInTimeZone, fromZonedTime } from "date-fns-tz";
 import { useState, useEffect } from "react";
 
 const Program = () => {
@@ -44,9 +44,10 @@ const Program = () => {
         // Create a date string in Tunisia timezone
         const tunisiaDateStr = `${year}-${String(monthMap[month] + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}T${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:00`;
         
-        // Parse as if it's in Tunisia timezone and convert to user's timezone
-        const dateInTunisia = toZonedTime(tunisiaDateStr, "Africa/Tunis");
-        const formattedTime = formatInTimeZone(dateInTunisia, userTimezone, "HH:mm");
+        // Treat the date string as Tunisia time and convert to UTC
+        const utcDate = fromZonedTime(tunisiaDateStr, "Africa/Tunis");
+        // Format the UTC date in the user's timezone
+        const formattedTime = formatInTimeZone(utcDate, userTimezone, "HH:mm");
         
         return formattedTime;
       } catch (error) {
