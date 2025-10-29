@@ -66,9 +66,27 @@ const Program = () => {
     }
   ];
 
-  const isBreakOrEvent = (title: string) => {
-    const keywords = ["Coffee Break", "Lunch", "Registration", "Opening Remarks", "Gathering", "Cultural Evening", "Closing Remarks", "Farewell"];
-    return keywords.some(keyword => title.includes(keyword));
+  const getEventType = (title: string) => {
+    if (title.includes("Coffee Break") || title.includes("Farewell Coffee")) return "coffee";
+    if (title.includes("Lunch")) return "lunch";
+    if (title.includes("Gathering and Group Photo") || title.includes("Cultural Evening")) return "social";
+    if (title.includes("Registration") || title.includes("Opening Remarks") || title.includes("Closing Remarks")) return "ceremony";
+    return "talk";
+  };
+
+  const getEventStyles = (type: string) => {
+    switch(type) {
+      case "coffee":
+        return "bg-amber-50 dark:bg-amber-950/30 border-l-4 border-amber-500";
+      case "lunch":
+        return "bg-green-50 dark:bg-green-950/30 border-l-4 border-green-500";
+      case "social":
+        return "bg-purple-50 dark:bg-purple-950/30 border-l-4 border-purple-500";
+      case "ceremony":
+        return "bg-muted/50";
+      default:
+        return "bg-card";
+    }
   };
 
   return (
@@ -91,10 +109,12 @@ const Program = () => {
                 {day.day}
               </h3>
               <div className="space-y-4">
-                {day.sessions.map((session, sessionIndex) => (
+                {day.sessions.map((session, sessionIndex) => {
+                  const eventType = getEventType(session.title);
+                  return (
                   <Card 
                     key={sessionIndex}
-                    className={`${isBreakOrEvent(session.title) ? 'bg-muted/50' : 'bg-card'} hover:shadow-lg transition-shadow`}
+                    className={`${getEventStyles(eventType)} hover:shadow-lg transition-shadow`}
                   >
                     <CardContent className="p-4 md:p-6">
                       <div className="flex flex-col md:flex-row gap-4">
@@ -107,7 +127,7 @@ const Program = () => {
                         
                         {/* Content */}
                         <div className="flex-1 space-y-2">
-                          <h4 className={`${isBreakOrEvent(session.title) ? 'text-base font-medium' : 'text-lg font-semibold'}`}>
+                          <h4 className={`${eventType !== 'talk' ? 'text-base font-medium' : 'text-lg font-semibold'}`}>
                             {session.title}
                           </h4>
                           
@@ -138,7 +158,8 @@ const Program = () => {
                       </div>
                     </CardContent>
                   </Card>
-                ))}
+                  );
+                })}
               </div>
             </div>
           ))}
