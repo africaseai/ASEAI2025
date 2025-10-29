@@ -227,7 +227,7 @@ const Program = () => {
                   );
 
                   return speakerHasPage && detailLink ? (
-                    <Link key={sessionIndex} to={detailLink}>
+                    <Link key={sessionIndex} to={detailLink} className="block">
                       <Card className={`${getEventStyles(eventType)} hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer`}>
                         {cardContent}
                       </Card>
