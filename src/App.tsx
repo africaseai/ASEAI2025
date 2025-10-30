@@ -48,7 +48,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/ASEAI2025">
+      <BrowserRouter>
         <RedirectHandler />
         <Routes>
           <Route path="/" element={<Index />} />
