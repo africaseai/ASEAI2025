@@ -68,16 +68,16 @@ const Program = () => {
       sessions: [
         { time: "08:30–09:00", title: "Registration & Welcome Coffee", speaker: "", type: "" },
         { time: "09:00–09:15", title: "Opening Remarks", speaker: "", type: "" },
-        { time: "09:15–10:15", title: "Keynote - The AIware Revolution: Forging the Future of Agentic Software Engineering", speaker: "Pr. Ahmed E. Hassan", type: "In-person" },
+        { time: "09:15–10:15", title: "Keynote - The AIware Revolution: Forging the Future of Agentic Software Engineering", speaker: "Pr. Ahmed E. Hassan", type: "On-site" },
         { time: "10:15–10:45", title: "Coffee Break", speaker: "", type: "" },
         { time: "10:45–11:45", title: "How to Write a Great Research Paper?", speaker: "Pr. Simon Peyton Jones", type: "Remote" },
-        { time: "11:45–12:30", title: "On Hard and Soft Skills for Surviving Your PhD Journey", speaker: "Pr. Walid Maalej", type: "In-person" },
+        { time: "11:45–12:30", title: "On Hard and Soft Skills for Surviving Your PhD Journey", speaker: "Pr. Walid Maalej", type: "On-site" },
         { time: "12:30–12:45", title: "Gathering and Group Photo", speaker: "", type: "" },
         { time: "12:45–14:00", title: "Lunch", speaker: "", type: "" },
         { time: "14:00–14:45", title: "Navigating Graduate School and Beyond", speaker: "Dr. Sarah Nadi", type: "Remote" },
-        { time: "14:45–15:30", title: "Keynote - Towards a framework for the development of SPAs (smart process applications)", speaker: "Pr. Hafedh Mili", type: "In-person" },
+        { time: "14:45–15:30", title: "Keynote - Towards a framework for the development of SPAs (smart process applications)", speaker: "Pr. Hafedh Mili", type: "On-site" },
         { time: "15:30–16:00", title: "Coffee Break", speaker: "", type: "" },
-        { time: "16:00–16:30", title: "Panel Discussion – open (students mentoring, best research practices, AI and SE in the Next Decade)", speaker: "", type: "In-person" },
+        { time: "16:00–16:30", title: "Panel Discussion – open (students mentoring, best research practices, AI and SE in the Next Decade)", speaker: "", type: "On-site" },
         { time: "16:30–17:15", title: "Human in the Loop: Responsible Use of Generative AI Tools in Software Engineering Practice", speaker: "Pr. Bruce Maxim", type: "Remote" },
         { time: "17:15–18:00", title: "LLM-Based Agents for Software Engineering: Benefits and Drawbacks", speaker: "Dr. Fatemeh Fard", type: "Remote" },
         { time: "18:00–20:30", title: "Cultural Evening & Tunisian Dinner", speaker: "", type: "" },
@@ -86,10 +86,10 @@ const Program = () => {
     {
       day: "Day 2 - Tuesday, Nov 25, 2025",
       sessions: [
-        { time: "08:30–09:30", title: "Keynote - No Size Fits All: Goal-Driven Alignment of LLMs for Software Engineering Tasks", speaker: "Pr. Houari Sahraoui", type: "In-person" },
-        { time: "09:30–10:30", title: "Keynote - Generative Requirements Engineering and Design", speaker: "Pr. Walid Maalej", type: "In-person" },
+        { time: "08:30–09:30", title: "Keynote - No Size Fits All: Goal-Driven Alignment of LLMs for Software Engineering Tasks", speaker: "Pr. Houari Sahraoui", type: "On-site" },
+        { time: "09:30–10:30", title: "Keynote - Generative Requirements Engineering and Design", speaker: "Pr. Walid Maalej", type: "On-site" },
         { time: "10:30–11:00", title: "Coffee Break", speaker: "", type: "" },
-        { time: "11:00–11:30", title: "Ask me anything: How to integrate AI into computer science and SE curriculum at the undergraduate levels", speaker: "Pr. Ahmed E. Hassan", type: "In-person" },
+        { time: "11:00–11:30", title: "Ask me anything: How to integrate AI into computer science and SE curriculum at the undergraduate levels", speaker: "Pr. Ahmed E. Hassan", type: "On-site" },
         { time: "11:30–12:30", title: "Keynote - On Software Architecture", speaker: "Pr. Michel Chaudron", type: "Remote" },
         { time: "12:30–13:45", title: "Lunch", speaker: "", type: "" },
         { time: "13:45–14:30", title: "The Chronicles of a Professor", speaker: "Dr. Sarah Nadi", type: "Remote" },
@@ -103,11 +103,11 @@ const Program = () => {
     {
       day: "Day 3 - Wednesday, Nov 26, 2025",
       sessions: [
-        { time: "08:30–09:15", title: "From Monolith to Microservices — A Journey Powered by LLMs and the Open Challenges Ahead", speaker: "Dr. Mohamed Aymen Saied", type: "In-person" },
-        { time: "09:15–10:00", title: "Automating Code Review: From Heuristics to Agentic AI", speaker: "Dr. Moataz Chouchen", type: "In-person" },
+        { time: "08:30–09:15", title: "From Monolith to Microservices — A Journey Powered by LLMs and the Open Challenges Ahead", speaker: "Dr. Mohamed Aymen Saied", type: "On-site" },
+        { time: "09:15–10:00", title: "Automating Code Review: From Heuristics to Agentic AI", speaker: "Dr. Moataz Chouchen", type: "On-site" },
         { time: "10:00–10:30", title: "Coffee Break", speaker: "", type: "" },
         { time: "10:30–11:00", title: "Code Clones and Beyond: My Reflections on Software Engineering Research", speaker: "Pr. Katsuro Inoue", type: "Remote" },
-        { time: "11:00–11:45", title: "Phinally Done: Life Beyond the Ivory Tower", speaker: "Dr. Zadia Codabux", type: "In-person" },
+        { time: "11:00–11:45", title: "Phinally Done: Life Beyond the Ivory Tower", speaker: "Dr. Zadia Codabux", type: "On-site" },
         { time: "11:45–12:30", title: "Collaborations Result in Diverse Thinking, Novelty and Different Perspectives", speaker: "Pr. Raula Gaikovina Kula", type: "Remote" },
         { time: "12:30–14:00", title: "Lunch", speaker: "", type: "" },
         { time: "14:00–15:00", title: "About Empirical Studies on Software Quality", speaker: "Pr. Yann-Gaël Guéhéneuc", type: "Remote" },
@@ -280,7 +280,7 @@ const Program = () => {
                         {session.type && (
                           <div className="flex-shrink-0">
                             <Badge 
-                              variant={session.type === "In-person" ? "default" : "secondary"}
+                              variant={session.type === "On-site" ? "default" : "secondary"}
                               className="whitespace-nowrap"
                             >
                               {session.type}
