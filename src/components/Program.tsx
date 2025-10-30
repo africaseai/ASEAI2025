@@ -90,12 +90,12 @@ const Program = () => {
         { time: "09:30–10:30", title: "Keynote - Generative Requirements Engineering and Design", speaker: "Walid Maalej", type: "In-person" },
         { time: "10:30–11:00", title: "Coffee Break", speaker: "", type: "" },
         { time: "11:00–11:30", title: "Ask me anything: How to integrate AI into computer science and SE curriculum at the undergraduate levels", speaker: "Ahmed E. Hassan", type: "In-person" },
-        { time: "11:30–12:30", title: "Keynote - On Software Architecture", speaker: "Michel Chaudron", type: "In-person" },
+        { time: "11:30–12:30", title: "Keynote - On Software Architecture", speaker: "Michel Chaudron", type: "Remote" },
         { time: "12:30–13:45", title: "Lunch", speaker: "", type: "" },
         { time: "13:45–14:30", title: "The Chronicles of a Professor", speaker: "Sarah Nadi", type: "Remote" },
         { time: "14:30–15:30", title: "Keynote - Automated Testing and Safety Analysis of Deep Learning Systems", speaker: "Lionel Briand", type: "Remote" },
         { time: "15:30–16:00", title: "Coffee Break", speaker: "", type: "" },
-        { time: "16:00–16:45", title: "System assurance in the era of Large Language Models", speaker: "Alvine B. Belle", type: "Remote" },
+        { time: "16:00–16:45", title: "Why and How to get a PhD?", speaker: "Lionel Briand", type: "Remote" },
         { time: "16:45–17:30", title: "11 steps to structuring a manuscript", speaker: "Prasun Lala", type: "Remote" },
         { time: "17:30–18:15", title: "Think like a reviewer", speaker: "Prasun Lala", type: "Remote" },
       ]
@@ -113,9 +113,10 @@ const Program = () => {
         { time: "14:00–15:00", title: "About Empirical Studies on Software Quality", speaker: "Yann-Gaël Guéhéneuc", type: "Remote" },
         { time: "15:00–16:00", title: "Ensuring Trust: Testing and Safety Monitoring of Deep Learning-based Systems", speaker: "Manel Abdellatif", type: "Remote" },
         { time: "16:00–16:30", title: "Coffee Break", speaker: "", type: "" },
-        { time: "16:30–17:30", title: "Kickstart Your AI Journey with NVIDIA's Free Learning Resources", speaker: "Fatima Tambajang", type: "Remote" },
-        { time: "17:30–17:45", title: "Closing Remarks & Certificates", speaker: "", type: "" },
-        { time: "17:45–18:00", title: "Farewell Coffee", speaker: "", type: "" },
+        { time: "16:30–17:15", title: "System assurance in the era of Large Language Models", speaker: "Alvine B. Belle", type: "Remote" },
+        { time: "17:15–18:00", title: "Kickstart Your AI Journey with NVIDIA's Free Learning Resources", speaker: "Fatima Tambajang", type: "Remote" },
+        { time: "18:00–18:15", title: "Closing Remarks & Certificates", speaker: "", type: "" },
+        { time: "18:15–18:30", title: "Farewell Coffee", speaker: "", type: "" },
       ]
     },
     {
