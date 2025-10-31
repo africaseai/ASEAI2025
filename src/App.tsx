@@ -48,8 +48,8 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <RedirectHandler basename="/ASEAI2025" />
+      <BrowserRouter basename="/ASEAI2025">
+        <RedirectHandler />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/speakers/moataz-chouchen" element={<MoatazChouchen />} />
