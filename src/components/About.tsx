@@ -74,7 +74,7 @@ const About = () => {
             <div className="flex justify-center">
               <Button asChild size="lg" className="gap-2">
                 <a
-                  href="/aseai-2025-flyer.pdf"
+                  href="/ASEAI2025/aseai-2025-flyer.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
