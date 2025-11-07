@@ -1,25 +1,8 @@
-import { X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
-
 const Announcement = () => {
-  const [isVisible, setIsVisible] = useState(true);
-
-  if (!isVisible) return null;
-
   return (
-    <div className="relative bg-gradient-to-r from-primary to-secondary text-primary-foreground">
-      <div className="container px-4 py-4">
-        <Button
-          variant="ghost"
-          size="icon"
-          className="absolute right-4 top-4 text-primary-foreground hover:bg-primary-foreground/20"
-          onClick={() => setIsVisible(false)}
-        >
-          <X className="h-4 w-4" />
-        </Button>
-        
-        <div className="max-w-4xl mx-auto pr-8">
+    <section className="py-20 bg-gradient-to-r from-primary to-secondary text-primary-foreground">
+      <div className="container px-4">
+        <div className="max-w-4xl mx-auto">
           <h3 className="text-xl md:text-2xl font-bold mb-3">
             🎉🌍 Big News for ASEAI 2025 Participants! ❄️🤖
           </h3>
@@ -70,7 +53,7 @@ const Announcement = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
