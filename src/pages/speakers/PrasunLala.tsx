@@ -67,9 +67,14 @@ const PrasunLala = () => {
               <CardContent className="p-6 space-y-6">
                 <div>
                   <h2 className="text-2xl font-bold mb-3">Talk 1: 11 steps to structuring a manuscript</h2>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Abstract coming soon.
-                  </p>
+                  <div className="text-muted-foreground leading-relaxed space-y-4">
+                    <p>
+                      This flash workshop, based on resources from Elsevier, will provide researchers with a step-by-step guide for organizing and writing scientific manuscripts. The best writing strategy often reverses the final published IMRAD format (Introduction, Methods, Results, and Discussion), by first preparing figures and tables, and then writing the Methods and Results before tackling the crucial Discussion section. The Discussion is arguably the most important section, presenting the chance to "sell your data" and confront existing work, rather than ignoring contradictory findings.
+                    </p>
+                    <p>
+                      Editorial acceptance often requires that the Methods section allows for experimental reproducibility through precise nomenclature and control descriptions, and that the Results section tells a clear story. Participants will learn the value of writing a compelling Introduction that moves from a global view to clearly stating the hypothesis and objectives at the end. Finally, we will cover crafting an Abstract and a concise Title, which together serve as the article's "calling card" to attract readers.
+                    </p>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -79,9 +84,17 @@ const PrasunLala = () => {
               <CardContent className="p-6 space-y-6">
                 <div>
                   <h2 className="text-2xl font-bold mb-3">Talk 2: Think like a reviewer</h2>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Abstract coming soon.
-                  </p>
+                  <div className="text-muted-foreground leading-relaxed space-y-4">
+                    <p>
+                      This flash workshop will offer a structured approach for researchers seeking to improve their proficiency in the peer review process. Reviewing constitutes a crucial collective effort that helps preserve the general quality of published articles. The function of a review is twofold: ensuring quality control for the targeted journal or conference, and providing constructive criticism to authors to help them improve their work.
+                    </p>
+                    <p>
+                      Committing to a review includes verifying sufficient competence in the manuscript's topic, respecting deadlines, maintaining confidentiality, and avoiding conflicts of interest. The evaluation process emphasizes careful, repeated reading to identify the paper's main contributions and evaluate their originality. We will discuss how to scrutinize the research, focusing on the quality of the methodological contents (checking assumptions and reproducibility) and the experimental methodology. Furthermore, attendees will learn the importance of assessing the results, including the use of statistical details and fair comparisons to the state-of-the-art.
+                    </p>
+                    <p>
+                      The second half focuses on report writing. A quality report should systematically include a neutral factual summary to demonstrate comprehension, a critical summary outlining global strengths and weaknesses, and a detailed, numbered list of comments that reference specific sections and suggest corrective measures. The final recommendation (kept confidential from the authors) allows the reviewer to justify their decision and indicate their confidence level.
+                    </p>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -91,9 +104,14 @@ const PrasunLala = () => {
               <CardContent className="p-6 space-y-6">
                 <div>
                   <h2 className="text-2xl font-bold mb-3">Biography</h2>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Prasun Lala is a member of SARA's team at the École de technologie supérieure (ÉTS), in Montréal, where he focuses on helping engineering graduate students learn skills related to scientific communication, through group activities involving writing and reviewing their own scientific work. He holds a M.Sc. in Neurophysiology from the Aerospace Medical Research Unit (AMRU) at McGill University and is part of the research support staff in Electrical and Computer Engineering at the Centre for Intelligent Machines (CIM) at McGill.
-                  </p>
+                  <div className="text-muted-foreground leading-relaxed space-y-4">
+                    <p>
+                      Prasun Lala is a Research Officer at the library of the École de Technologie Supérieure (ÉTS) in Montréal where he guides researchers and graduate students in scientific communication, research data management, AI, and other research-related topics. He holds an M.Sc. in Neurophysiology from the Aerospace Medical Research Unit (AMRU) at McGill University and was previously a doctoral candidate in Electrical and Computer Engineering at the Centre for Intelligent Machines (CIM) at McGill.
+                    </p>
+                    <p>
+                      His technical experience includes serving as a Research Associate on the Enhanced and Synthetic Vision System (ESVS) technology demonstrator project for Canadian Forces Search and Rescue at CIM, and acting as Director of Technology managing R&D processes for a New York-based firm. He has been an official reviewer for eleven conferences in computer vision and related fields. He believes that the effective communication of scientific ideas is as important as their discovery and strives to ensure all articles possess a clear narrative. He has lectured and taught courses at McGill University, École Polytechnique Montréal, Université de Montréal, and ÉTS, and has presented numerous workshops and moderated events at international scientific conferences.
+                    </p>
+                  </div>
                 </div>
               </CardContent>
             </Card>
