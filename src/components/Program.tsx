@@ -67,7 +67,7 @@ const Program = () => {
       day: "Day 1 - Monday, Nov 24, 2025",
       sessions: [
         { time: "08:30–09:00", title: "Registration & Welcome Coffee", speaker: "", type: "" },
-        { time: "09:00–09:15", title: "Opening Remarks", speaker: "", type: "" },
+        { time: "09:00–09:15", title: "Opening Remarks", speaker: "Pr. Ali Ouni, Dr. Maha Khemaja, Dr. Montassar Ben Messaoud", type: "On-site" },
         { time: "09:15–10:15", title: "Keynote - The AIware Revolution: Forging the Future of Agentic Software Engineering", speaker: "Pr. Ahmed E. Hassan", type: "On-site" },
         { time: "10:15–10:45", title: "Coffee Break", speaker: "", type: "" },
         { time: "10:45–11:45", title: "How to Write a Great Research Paper?", speaker: "Pr. Simon Peyton Jones", type: "Remote" },
