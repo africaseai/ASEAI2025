@@ -228,7 +228,7 @@ const Program = () => {
             </p>
             {userTimezone !== "Africa/Tunis" && (
               <p className="text-sm text-muted-foreground">
-                Times shown in your local timezone ({userTimezone.replace(/_/g, " ")})
+                Times shown in your local timezone
               </p>
             )}
           </div>
