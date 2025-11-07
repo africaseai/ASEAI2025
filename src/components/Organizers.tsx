@@ -5,6 +5,9 @@ import aliOuni from "@/assets/ali-ouni.png";
 import wiemMkaouer from "@/assets/wiem-mkaouer.jpg";
 import mahaKhemdja from "@/assets/maha-khemdja.png";
 import montassarBenMessaoud from "@/assets/montassar-ben-messaoud.jpg";
+import dalelKanzari from "@/assets/dalel-kanzari.png";
+import besmaYounes from "@/assets/besma-younes.jpg";
+import hichemTurki from "@/assets/hichem-turki.jpg";
 
 const Organizers = () => {
   const mainOrganizers = [
@@ -38,15 +41,25 @@ const Organizers = () => {
     },
   ];
 
-  const additionalRoles = [
+  const localOrganizers = [
     {
-      role: "Local Organizer",
-      people: [
-        { name: "Dr. Dalel Kanzari", affiliation: "ISSAT, Tunisia" },
-        { name: "Mrs. Besma Younes", affiliation: "Novation City, Tunisia" },
-        { name: "Mr. Hichem Turki", affiliation: "Novation City, Tunisia" }
-      ]
+      name: "Dr. Dalel Kanzari",
+      title: "ISSAT, Tunisia",
+      image: dalelKanzari,
     },
+    {
+      name: "Mrs. Besma Younes",
+      title: "Novation City, Tunisia",
+      image: besmaYounes,
+    },
+    {
+      name: "Mr. Hichem Turki",
+      title: "Novation City, Tunisia",
+      image: hichemTurki,
+    },
+  ];
+
+  const additionalRoles = [
     {
       role: "Web Chair",
       people: [
@@ -130,6 +143,34 @@ const Organizers = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          {/* Local Organizers */}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold text-center">Local Organizers</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              {localOrganizers.map((organizer, index) => (
+                <Card
+                  key={index}
+                  className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+                  style={{ boxShadow: "var(--card-shadow)" }}
+                >
+                  <div className="aspect-square overflow-hidden">
+                    <img
+                      src={organizer.image}
+                      alt={organizer.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <CardContent className="p-4 space-y-2">
+                    <h4 className="text-base font-bold">{organizer.name}</h4>
+                    <p className="text-xs text-muted-foreground">
+                      {organizer.title}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
 
           {/* Additional Roles */}
