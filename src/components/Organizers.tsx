@@ -42,7 +42,8 @@ const Organizers = () => {
     {
       role: "Local Organizer",
       people: [
-        { name: "Dalel Kanzari", affiliation: "ISSAT, Tunisia" }
+        { name: "Dr. Dalel Kanzari", affiliation: "ISSAT, Tunisia" },
+        { name: "Mrs. Besma Younes", affiliation: "Novation City, Tunisia" }
       ]
     },
     {
