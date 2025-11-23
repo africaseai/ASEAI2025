@@ -26,7 +26,7 @@ const Organizers = () => {
       website: "https://directory.umflint.edu/computer-science-engineering-and-physics/mmkaouer",
     },
     {
-      name: "Dr. Maha Khemdja",
+      name: "Dr. Maha Khemaja",
       title: "ISSAT Sousse, Tunisia",
       image: mahaKhemdja,
       email: "maha.khemdja@issatso.u-sousse.tn",
