@@ -122,7 +122,7 @@ const Program = () => {
     {
       day: "Day 4 - Thursday, Nov 27, 2025",
       sessions: [
-        { time: "10:00–11:00", title: "NVIDIA Certifications (Building RAG Agents with LLMs and Building Conversational AI applications)", speaker: "Dr. Maha KHEMAJA", type: "Remote", description: "Building RAG Agents with LLMs: Agents powered by large language models (LLMs) have shown great retrieval capability. This certificate explains how to deploy an agent system in practice with the flexibility to scale the system to meet the demands of users and customers.\n\nBuilding Conversational AI applications: Learn how to quickly build and deploy a conversational AI pipeline including transcription, NLP, and Speech" },
+        { time: "10:00–11:00", title: "NVIDIA Certifications (Building RAG Agents with LLMs and Building Conversational AI applications)", speaker: "Dr. Maha Khemaja", type: "Remote", description: "Building RAG Agents with LLMs: Agents powered by large language models (LLMs) have shown great retrieval capability. This certificate explains how to deploy an agent system in practice with the flexibility to scale the system to meet the demands of users and customers.\n\nBuilding Conversational AI applications: Learn how to quickly build and deploy a conversational AI pipeline including transcription, NLP, and Speech" },
       ]
     }
   ];
