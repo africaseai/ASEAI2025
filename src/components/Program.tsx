@@ -4,14 +4,24 @@ import { Link } from "react-router-dom";
 import { ExternalLink } from "lucide-react";
 import { formatInTimeZone, fromZonedTime } from "date-fns-tz";
 import { useState, useEffect } from "react";
+import { differenceInSeconds, parseISO } from "date-fns";
 
 const Program = () => {
   const [userTimezone, setUserTimezone] = useState<string>("Africa/Tunis");
+  const [currentTime, setCurrentTime] = useState<Date>(new Date());
   
   useEffect(() => {
     // Detect user's timezone
     const detected = Intl.DateTimeFormat().resolvedOptions().timeZone;
     setUserTimezone(detected);
+  }, []);
+
+  useEffect(() => {
+    // Update current time every second
+    const interval = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+    return () => clearInterval(interval);
   }, []);
 
   // Convert Tunisia time to user's timezone
@@ -219,6 +229,67 @@ const Program = () => {
     return speakerMap[speakerName] || null;
   };
 
+  const parseEventTime = (dateStr: string, timeStr: string) => {
+    const dateMatch = dateStr.match(/(\w+) (\d+), (\d+)/);
+    if (!dateMatch) return null;
+    
+    const [, month, day, year] = dateMatch;
+    const monthMap: { [key: string]: number } = {
+      "Jan": 0, "Feb": 1, "Mar": 2, "Apr": 3, "May": 4, "Jun": 5,
+      "Jul": 6, "Aug": 7, "Sep": 8, "Oct": 9, "Nov": 10, "Dec": 11
+    };
+    
+    // Extract start time from time range
+    const startTime = timeStr.split("–")[0].trim();
+    const [hours, minutes] = startTime.split(":").map(Number);
+    
+    const tunisiaDateStr = `${year}-${String(monthMap[month] + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}T${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:00`;
+    return fromZonedTime(tunisiaDateStr, "Africa/Tunis");
+  };
+
+  const parseEventEndTime = (dateStr: string, timeStr: string) => {
+    const dateMatch = dateStr.match(/(\w+) (\d+), (\d+)/);
+    if (!dateMatch) return null;
+    
+    const [, month, day, year] = dateMatch;
+    const monthMap: { [key: string]: number } = {
+      "Jan": 0, "Feb": 1, "Mar": 2, "Apr": 3, "May": 4, "Jun": 5,
+      "Jul": 6, "Aug": 7, "Sep": 8, "Oct": 9, "Nov": 10, "Dec": 11
+    };
+    
+    // Extract end time from time range
+    const times = timeStr.split("–");
+    const endTime = times.length > 1 ? times[1].trim() : times[0].trim();
+    const [hours, minutes] = endTime.split(":").map(Number);
+    
+    const tunisiaDateStr = `${year}-${String(monthMap[month] + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}T${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:00`;
+    return fromZonedTime(tunisiaDateStr, "Africa/Tunis");
+  };
+
+  const isEventLive = (dateStr: string, timeStr: string) => {
+    const startTime = parseEventTime(dateStr, timeStr);
+    const endTime = parseEventEndTime(dateStr, timeStr);
+    if (!startTime || !endTime) return false;
+    
+    return currentTime >= startTime && currentTime <= endTime;
+  };
+
+  const getNextEventCountdown = (dateStr: string, timeStr: string) => {
+    const startTime = parseEventTime(dateStr, timeStr);
+    if (!startTime) return null;
+    
+    const secondsUntilStart = differenceInSeconds(startTime, currentTime);
+    if (secondsUntilStart <= 0) return null;
+    
+    const hours = Math.floor(secondsUntilStart / 3600);
+    const minutes = Math.floor((secondsUntilStart % 3600) / 60);
+    const seconds = secondsUntilStart % 60;
+    
+    if (hours > 24) return null; // Don't show countdown if more than 24 hours away
+    
+    return { hours, minutes, seconds };
+  };
+
   return (
     <section id="program" className="py-20 md:py-32 bg-background">
       <div className="container px-4">
@@ -249,14 +320,28 @@ const Program = () => {
                   const speakerHasPage = session.speaker && hasDetailPage(session.speaker);
                   const detailLink = speakerHasPage ? getDetailPageLink(session.speaker) : null;
                   
+                  const isLive = isEventLive(day.day, session.time);
+                  const countdown = getNextEventCountdown(day.day, session.time);
+                  
                   const cardContent = (
                     <CardContent className="p-4 md:p-6">
                       <div className="flex flex-col md:flex-row gap-4">
-                        {/* Time */}
-                        <div className="md:w-32 flex-shrink-0">
+                        {/* Live Indicator / Countdown */}
+                        <div className="md:w-40 flex-shrink-0 flex flex-col gap-2">
                           <Badge variant="outline" className="font-mono text-sm">
                             {convertTime(day.day, session.time)}
                           </Badge>
+                          {isLive && (
+                            <Badge className="bg-red-500 hover:bg-red-600 text-white animate-pulse">
+                              🔴 LIVE NOW
+                            </Badge>
+                          )}
+                          {!isLive && countdown && (
+                            <div className="text-xs font-mono text-muted-foreground bg-muted/50 px-2 py-1 rounded border">
+                              Starts in: {countdown.hours > 0 && `${countdown.hours}h `}
+                              {countdown.minutes}m {countdown.seconds}s
+                            </div>
+                          )}
                         </div>
                         
                         {/* Content */}
