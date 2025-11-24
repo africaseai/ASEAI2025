@@ -319,29 +319,17 @@ const Program = () => {
                   const eventType = getEventType(session.title);
                   const speakerHasPage = session.speaker && hasDetailPage(session.speaker);
                   const detailLink = speakerHasPage ? getDetailPageLink(session.speaker) : null;
-                  
                   const isLive = isEventLive(day.day, session.time);
                   const countdown = getNextEventCountdown(day.day, session.time);
                   
                   const cardContent = (
                     <CardContent className="p-4 md:p-6">
                       <div className="flex flex-col md:flex-row gap-4">
-                        {/* Live Indicator / Countdown */}
-                        <div className="md:w-40 flex-shrink-0 flex flex-col gap-2">
+                        {/* Time */}
+                        <div className="md:w-32 flex-shrink-0">
                           <Badge variant="outline" className="font-mono text-sm">
                             {convertTime(day.day, session.time)}
                           </Badge>
-                          {isLive && (
-                            <Badge className="bg-red-500 hover:bg-red-600 text-white animate-pulse">
-                              🔴 LIVE NOW
-                            </Badge>
-                          )}
-                          {!isLive && countdown && (
-                            <div className="text-xs font-mono text-muted-foreground bg-muted/50 px-2 py-1 rounded border">
-                              Starts in: {countdown.hours > 0 && `${countdown.hours}h `}
-                              {countdown.minutes}m {countdown.seconds}s
-                            </div>
-                          )}
                         </div>
                         
                         {/* Content */}
@@ -393,16 +381,42 @@ const Program = () => {
                     </CardContent>
                   );
 
-                  return speakerHasPage && detailLink ? (
-                    <Link key={sessionIndex} to={detailLink} className="block">
-                      <Card className={`${getEventStyles(eventType)} hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer`}>
-                        {cardContent}
-                      </Card>
-                    </Link>
-                  ) : (
-                    <Card key={sessionIndex} className={`${getEventStyles(eventType)} hover:shadow-lg transition-shadow`}>
-                      {cardContent}
-                    </Card>
+                  return (
+                    <div key={sessionIndex} className="relative flex gap-4">
+                      {/* Left side indicator */}
+                      <div className="w-20 flex-shrink-0 flex flex-col items-end justify-center gap-1">
+                        {isLive && (
+                          <div className="flex flex-col items-end gap-1">
+                            <div className="w-1 h-full bg-red-500 animate-pulse rounded-full absolute left-0 top-0 bottom-0" />
+                            <Badge className="bg-red-500 hover:bg-red-600 text-white text-xs animate-pulse">
+                              LIVE
+                            </Badge>
+                          </div>
+                        )}
+                        {!isLive && countdown && (
+                          <div className="text-xs font-mono text-muted-foreground text-right">
+                            {countdown.hours > 0 && <div>{countdown.hours}h</div>}
+                            <div>{countdown.minutes}m</div>
+                            <div>{countdown.seconds}s</div>
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Card */}
+                      <div className="flex-1">
+                        {speakerHasPage && detailLink ? (
+                          <Link to={detailLink} className="block">
+                            <Card className={`${getEventStyles(eventType)} hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer`}>
+                              {cardContent}
+                            </Card>
+                          </Link>
+                        ) : (
+                          <Card className={`${getEventStyles(eventType)} hover:shadow-lg transition-shadow`}>
+                            {cardContent}
+                          </Card>
+                        )}
+                      </div>
+                    </div>
                   );
                 })}
               </div>
