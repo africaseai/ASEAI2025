@@ -80,7 +80,7 @@ const Program = () => {
         { time: "16:00–16:30", title: "On Scoring the Security of Cyber-Physical Systems", speaker: "Pr. Abdelmajid Khelil", type: "On-site" },
         { time: "16:30–17:15", title: "Human in the Loop: Responsible Use of Generative AI Tools in Software Engineering Practice", speaker: "Pr. Bruce Maxim", type: "Remote" },
         { time: "17:15–18:00", title: "LLM-Based Agents for Software Engineering: Benefits and Drawbacks", speaker: "Dr. Fatemeh Fard", type: "Remote" },
-        { time: "18:00–20:30", title: "Cultural Evening & Tunisian Dinner", speaker: "", type: "", description: "📍 Restaurant Dar el Habib\n4000, 52 Rue Sidi Bouraoui, Sousse, Tunisia", link: "https://share.google/M8Y9Pc1oPxLJQ4jtP" },
+        { time: "18:00–20:30", title: "Cultural Evening & Tunisian Dinner", speaker: "", type: "", description: "📍 Restaurant Dar el Habib\n4000, 52 Rue Sidi Bouraoui, Sousse, Tunisia", link: "https://maps.app.goo.gl/w5qsrzzGxD6vEuuD8" },
       ]
     },
     {
