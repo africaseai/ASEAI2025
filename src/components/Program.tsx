@@ -359,9 +359,9 @@ const Program = () => {
                             </Badge>
                           )}
                           {countdown && (
-                            <div className="text-xs font-mono text-muted-foreground">
+                            <Badge className="bg-blue-500 hover:bg-blue-600 text-white text-xs block w-fit">
                               Starting in {countdown.hours > 0 && `${countdown.hours}h `}{countdown.minutes}m
-                            </div>
+                            </Badge>
                           )}
                         </div>
                         
