@@ -283,12 +283,34 @@ const Program = () => {
     
     const hours = Math.floor(secondsUntilStart / 3600);
     const minutes = Math.floor((secondsUntilStart % 3600) / 60);
-    const seconds = secondsUntilStart % 60;
     
     if (hours > 24) return null; // Don't show countdown if more than 24 hours away
     
-    return { hours, minutes, seconds };
+    return { hours, minutes };
   };
+
+  // Find the next upcoming event across all days
+  const getNextUpcomingEvent = () => {
+    let nextEvent: { dayIndex: number; sessionIndex: number } | null = null;
+    let minTimeDiff = Infinity;
+
+    schedule.forEach((day, dayIndex) => {
+      day.sessions.forEach((session, sessionIndex) => {
+        const startTime = parseEventTime(day.day, session.time);
+        if (!startTime) return;
+        
+        const timeDiff = differenceInSeconds(startTime, currentTime);
+        if (timeDiff > 0 && timeDiff < minTimeDiff) {
+          minTimeDiff = timeDiff;
+          nextEvent = { dayIndex, sessionIndex };
+        }
+      });
+    });
+
+    return nextEvent;
+  };
+
+  const nextUpcomingEvent = getNextUpcomingEvent();
 
   return (
     <section id="program" className="py-20 md:py-32 bg-background">
@@ -320,7 +342,8 @@ const Program = () => {
                   const speakerHasPage = session.speaker && hasDetailPage(session.speaker);
                   const detailLink = speakerHasPage ? getDetailPageLink(session.speaker) : null;
                   const isLive = isEventLive(day.day, session.time);
-                  const countdown = getNextEventCountdown(day.day, session.time);
+                  const isNextEvent = nextUpcomingEvent?.dayIndex === dayIndex && nextUpcomingEvent?.sessionIndex === sessionIndex;
+                  const countdown = isNextEvent ? getNextEventCountdown(day.day, session.time) : null;
                   
                   const cardContent = (
                     <CardContent className="p-4 md:p-6">
@@ -382,9 +405,9 @@ const Program = () => {
                   );
 
                   return (
-                    <div key={sessionIndex} className="relative flex gap-4">
+                    <div key={sessionIndex} className="relative flex gap-3">
                       {/* Left side indicator */}
-                      <div className="w-20 flex-shrink-0 flex flex-col items-end justify-center gap-1">
+                      <div className="w-12 flex-shrink-0 flex flex-col items-end justify-center gap-1">
                         {isLive && (
                           <div className="flex flex-col items-end gap-1">
                             <div className="w-1 h-full bg-red-500 animate-pulse rounded-full absolute left-0 top-0 bottom-0" />
@@ -393,11 +416,10 @@ const Program = () => {
                             </Badge>
                           </div>
                         )}
-                        {!isLive && countdown && (
-                          <div className="text-xs font-mono text-muted-foreground text-right">
+                        {countdown && (
+                          <div className="text-xs font-mono text-muted-foreground text-right leading-tight">
                             {countdown.hours > 0 && <div>{countdown.hours}h</div>}
                             <div>{countdown.minutes}m</div>
-                            <div>{countdown.seconds}s</div>
                           </div>
                         )}
                       </div>
