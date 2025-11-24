@@ -76,6 +76,9 @@ const Program = () => {
     {
       day: "Day 1 - Monday, Nov 24, 2025",
       sessions: [
+        { time: "01:51–01:52", title: "TEST EVENT 1 - Will be live at 1:51 AM", speaker: "Test Speaker", type: "On-site" },
+        { time: "01:52–01:53", title: "TEST EVENT 2 - Will be live at 1:52 AM", speaker: "Test Speaker", type: "On-site" },
+        { time: "01:53–01:54", title: "TEST EVENT 3 - Will be live at 1:53 AM", speaker: "Test Speaker", type: "On-site" },
         { time: "08:30–09:00", title: "Registration & Opening Talks", speaker: "", type: "" },
         { time: "09:00–09:15", title: "Opening Remarks", speaker: "Pr. Ali Ouni, Dr. Maha Khemaja, Dr. Montassar Ben Messaoud", type: "On-site" },
         { time: "09:15–10:15", title: "Keynote - The AIware Revolution: Forging the Future of Agentic Software Engineering", speaker: "Pr. Ahmed E. Hassan", type: "On-site" },
