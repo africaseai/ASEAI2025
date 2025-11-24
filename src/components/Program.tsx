@@ -80,7 +80,7 @@ const Program = () => {
         { time: "16:00–16:30", title: "On Scoring the Security of Cyber-Physical Systems", speaker: "Pr. Abdelmajid Khelil", type: "On-site" },
         { time: "16:30–17:15", title: "Human in the Loop: Responsible Use of Generative AI Tools in Software Engineering Practice", speaker: "Pr. Bruce Maxim", type: "Remote" },
         { time: "17:15–18:00", title: "LLM-Based Agents for Software Engineering: Benefits and Drawbacks", speaker: "Dr. Fatemeh Fard", type: "Remote" },
-        { time: "18:00–20:30", title: "Cultural Evening & Tunisian Dinner", speaker: "", type: "", description: "📍 Restaurant Dar el Habib\n4000, 52 Rue Sidi Bouraoui, Sousse, Tunisia\n🗺️ Google Maps: https://share.google/M8Y9Pc1oPxLJQ4jtP" },
+        { time: "18:00–20:30", title: "Cultural Evening & Tunisian Dinner", speaker: "", type: "", description: "📍 Restaurant Dar el Habib\n4000, 52 Rue Sidi Bouraoui, Sousse, Tunisia", link: "https://share.google/M8Y9Pc1oPxLJQ4jtP" },
       ]
     },
     {
@@ -274,9 +274,22 @@ const Program = () => {
                           )}
                           
                           {session.description && (
-                            <p className="text-sm text-muted-foreground whitespace-pre-line mt-2">
+                            <div className="text-sm text-muted-foreground whitespace-pre-line mt-2">
                               {session.description}
-                            </p>
+                              {(session as any).link && (
+                                <div className="mt-2">
+                                  <a 
+                                    href={(session as any).link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-primary hover:underline inline-flex items-center gap-1"
+                                  >
+                                    <ExternalLink className="h-3 w-3" />
+                                    View on Maps
+                                  </a>
+                                </div>
+                              )}
+                            </div>
                           )}
                         </div>
 
