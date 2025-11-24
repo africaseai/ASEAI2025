@@ -59,7 +59,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/ASEAI2025">
+      <BrowserRouter>
         <ScrollToTop />
         <RedirectHandler />
         <Routes>
