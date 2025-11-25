@@ -120,7 +120,7 @@ const Program = () => {
         { time: "11:00–11:45", title: "Phinally Done: Life Beyond the Ivory Tower", speaker: "Dr. Zadia Codabux", type: "On-site" },
         { time: "11:45–12:30", title: "Collaborations Result in Diverse Thinking, Novelty and Different Perspectives", speaker: "Pr. Raula Gaikovina Kula", type: "Remote" },
         { time: "12:30–13:30", title: "How to Write a Great Research Paper?", speaker: "Pr. Simon Peyton Jones", type: "Remote" },
-        { time: "12:30–14:00", title: "Lunch", speaker: "", type: "" },
+        { time: "13:30–14:00", title: "Lunch", speaker: "", type: "" },
         { time: "14:00–15:15", title: "About Empirical Studies on Software Quality", speaker: "Pr. Yann-Gaël Guéhéneuc", type: "Remote" },
         { time: "15:15–16:00", title: "Ensuring Trust: Testing and Safety Monitoring of Deep Learning-based Systems", speaker: "Dr. Manel Abdellatif", type: "Remote" },
         { time: "16:00–16:30", title: "Coffee Break", speaker: "", type: "" },
