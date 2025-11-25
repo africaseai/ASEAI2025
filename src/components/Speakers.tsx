@@ -151,12 +151,6 @@ const Speakers = () => {
       image: prasunLala,
       website: "https://www.etsmtl.ca/en/auteur/prasun-lala",
     },
-    {
-      name: "Pr. Abdelmajid Khelil",
-      title: "Landshut University of Applied Sciences, Germany",
-      image: abdelmajidKhelil,
-      website: "https://www.haw-landshut.de/",
-    },
   ];
 
   const hasDetailPage = (speakerName: string) => {
@@ -179,8 +173,7 @@ const Speakers = () => {
            speakerName === "Dr. Manel Abdellatif" ||
            speakerName === "Pr. Hafedh Mili" ||
            speakerName === "Mr. Prasun Lala" ||
-           speakerName === "Pr. Yann-Gaël Guéhéneuc" ||
-           speakerName === "Pr. Abdelmajid Khelil";
+           speakerName === "Pr. Yann-Gaël Guéhéneuc";
   };
 
   const getDetailPageLink = (speakerName: string) => {
@@ -243,9 +236,6 @@ const Speakers = () => {
     }
     if (speakerName === "Pr. Yann-Gaël Guéhéneuc") {
       return "/speakers/yann-gael-gueheneuc";
-    }
-    if (speakerName === "Pr. Abdelmajid Khelil") {
-      return "/speakers/abdelmajid-khelil";
     }
     return null;
   };
