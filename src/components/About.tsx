@@ -60,7 +60,15 @@ const About = () => {
               creativity, and build lasting collaborations. Through interactive sessions, mentoring, and cutting-edge
               talks, the mission of the school is to empower the next generation of students, researchers, and
               professionals with hands-on knowledge and deep insights into the future of Software Engineering in the era
-              of AI.
+              of AI. Stay connected and follow our journey on{" "}
+      <a 
+        href="https://www.facebook.com/profile.php?id=61581605551176" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="text-primary hover:text-secondary underline decoration-2 underline-offset-4 transition-colors"
+      >
+        Facebook
+      </a>.
             </p>
           </div>
 
